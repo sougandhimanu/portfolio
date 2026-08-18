@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sougandhi Manonmani Pendyala — Software Development Engineer</title>
+<meta name="description" content="Sougandhi Manonmani Pendyala — Software Development Engineer at Amazon. Distributed systems, event-driven services, full-stack engineering.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ STATUS BAR ============ -->
+<header class="statusbar" id="statusbar">
+  <a href="#top" class="statusbar-id">Sougandhi&nbsp;/&nbsp;Pendyala</a>
+  <div class="statusbar-clock" id="clock" aria-hidden="true"></div>
+  <div class="statusbar-right">
+    <span class="statusbar-scroll" id="scrollPct">00%</span>
+    <button class="theme-switch" id="themeToggle" aria-label="Toggle color theme">
+      <span class="theme-switch-track"><span class="theme-switch-thumb"></span></span>
+      <span class="theme-switch-label" id="themeLabel">DARK</span>
+    </button>
+    <button class="index-toggle" id="indexToggle" aria-label="Open section index" aria-expanded="false">INDEX</button>
+  </div>
+</header>
+
+<!-- ============ INDEX RAIL (desktop) / OVERLAY (mobile) ============ -->
+<nav class="rail" id="rail">
+  <p class="rail-heading">Index</p>
+  <ol class="rail-list">
+    <li><a href="#manifest" data-target="manifest"><span class="rail-num">00</span>Manifest</a></li>
+    <li><a href="#log" data-target="log"><span class="rail-num">01</span>Log</a></li>
+    <li><a href="#education" data-target="education"><span class="rail-num">02</span>Education</a></li>
+    <li><a href="#capabilities" data-target="capabilities"><span class="rail-num">03</span>Capabilities</a></li>
+    <li><a href="#casefiles" data-target="casefiles"><span class="rail-num">04</span>Case&nbsp;Files</a></li>
+    <li><a href="#research" data-target="research"><span class="rail-num">05</span>Research</a></li>
+    <li><a href="#credentials" data-target="credentials"><span class="rail-num">06</span>Credentials</a></li>
+    <li><a href="#uplink" data-target="uplink"><span class="rail-num">07</span>Uplink</a></li>
+  </ol>
+</nav>
+
+<main id="top">
+
+  <!-- ============ 00 MANIFEST ============ -->
+  <section id="manifest" class="sec sec-manifest">
+    <p class="eyebrow">00 / Manifest</p>
+
+    <div class="manifest-grid">
+      <div class="manifest-main">
+        <h1 class="manifest-name">Sougandhi Manonmani<br>Pendyala</h1>
+        <p class="manifest-line">Software engineer for systems that are <em>not allowed</em> to go down.</p>
+
+        <p class="manifest-body">
+          Software Development Engineer at Amazon with experience building scalable full-stack
+          applications, distributed systems, and cloud-native services using Java, Spring Boot, React,
+          TypeScript, and AWS. Skilled in designing event-driven architectures, REST APIs, automated
+          testing frameworks, and operational monitoring solutions — with a strong foundation in
+          software engineering, distributed systems, data structures, and algorithms.
+        </p>
+
+        <div class="manifest-actions">
+          <a href="Sougandhi_SDE.pdf" download class="btn-hard">Download résumé <span class="arrow">↓</span></a>
+          <button class="btn-hard btn-hard-outline" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
+            sougandhimanu@gmail.com
+          </button>
+        </div>
+      </div>
+
+      <aside class="manifest-record" aria-label="Current status">
+        <dl>
+          <div class="record-row"><dt>Role</dt><dd>Software Development Engineer</dd></div>
+          <div class="record-row"><dt>Company</dt><dd>Amazon</dd></div>
+          <div class="record-row"><dt>Location</dt><dd>Detroit, MI, USA</dd></div>
+          <div class="record-row"><dt>Since</dt><dd>Sep 2025</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ 01 LOG ============ -->
+  <section id="log" class="sec">
+    <p class="eyebrow">01 / Log</p>
+    <h2 class="sec-title">Deployment record</h2>
+
+    <div class="deploy-head">
+      <div><span class="dt">Deploy</span><span class="dd">Software Development Engineer</span></div>
+      <div><span class="dt">Target</span><span class="dd">Amazon &middot; Detroit, MI, USA</span></div>
+    </div>
+
+    <ol class="entry-log">
+      <li class="entry"><span class="entry-tag tag-feature">FEATURE</span>
+        <p>Designed and delivered a full-stack seller migration feature using Spring Boot REST APIs and React, enabling merchants to manage BIL migration workflows with merchant access validation and achieving 100% unit test coverage.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-arch">ARCHITECTURE</span>
+        <p>Implemented event-driven asynchronous offer expansion processing using AWS SQS FIFO queues, including queue consumers, filter-chain logic, dead-letter queue handling, and multi-tier CloudWatch alerting.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-platform">PLATFORM</span>
+        <p>Built a dynamic traffic-shaping system using AWS AppConfig and policy-based controls, enabling real-time rate-limit adjustments across AWS regions without service redeployments.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-perf">PERFORMANCE</span>
+        <p>Configured deployment pipelines and optimized Java microservices through JVM tuning, startup automation scripts, service health monitoring, and production-readiness enhancements.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-frontend">FRONTEND</span>
+        <p>Developed a React-based cooldown mechanism with localStorage persistence and polling hooks, ensuring seamless state recovery and improved user experience across browser sessions.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-testing">TESTING</span>
+        <p>Authored unit tests using JUnit and Mockito, integration tests, and frontend functional tests using Vitest, achieving 98%+ code coverage across backend and frontend services.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-oncall">ON-CALL</span>
+        <p>Participated in on-call rotations, resolved production incidents, performed root-cause analyses, and improved observability through diagnostic logging and monitoring enhancements.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-tooling">TOOLING</span>
+        <p>Leveraged AI-assisted development tools including Claude and Kiro to accelerate feature development, debugging, testing, and engineering productivity.</p></li>
+    </ol>
+  </section>
+
+  <!-- ============ 02 EDUCATION ============ -->
+  <section id="education" class="sec">
+    <p class="eyebrow">02 / Education</p>
+    <h2 class="sec-title">Education</h2>
+
+    <div class="edu-block">
+      <div class="edu-gpa">4.0</div>
+      <div class="edu-info">
+        <h3>Master of Information Technology and Management</h3>
+        <p class="edu-org">Illinois Institute of Technology &middot; Chicago, USA</p>
+        <p class="edu-gpa-label">CGPA 4.0 / 4.0</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 CAPABILITIES ============ -->
+  <section id="capabilities" class="sec">
+    <p class="eyebrow">03 / Capabilities</p>
+    <h2 class="sec-title">Stack</h2>
+
+    <div class="stack-layers">
+      <div class="stack-layer">
+        <span class="stack-label">Languages</span>
+        <span class="stack-items">Java · TypeScript · JavaScript · Python · SQL · HTML · CSS</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">Full Stack</span>
+        <span class="stack-items">React · Redux · Spring Boot · REST APIs · Microservices · Distributed Systems</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">Cloud &amp; AWS</span>
+        <span class="stack-items">AWS CDK · SQS · DynamoDB · CloudWatch · IAM · AppConfig</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">DevOps &amp; Tools</span>
+        <span class="stack-items">Docker · Kubernetes · CI/CD · Git · GitHub · GitLab · Jira · Claude · Kiro</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">Testing</span>
+        <span class="stack-items">JUnit · Mockito · Vitest · Integration Testing · Functional Testing</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">Core CS</span>
+        <span class="stack-items">Data Structures · Algorithms · Object-Oriented Programming</span>
+      </div>
+      <div class="stack-layer">
+        <span class="stack-label">Collaboration</span>
+        <span class="stack-items">Problem Solving · Communication · Cross-Functional Collaboration · Agile Methodologies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 CASE FILES ============ -->
+  <section id="casefiles" class="sec">
+    <p class="eyebrow">04 / Case Files</p>
+    <h2 class="sec-title">Projects</h2>
+
+    <div class="dossier">
+      <div class="dossier-num">01</div>
+      <div class="dossier-body">
+        <h3>Multi Language AI Chatbot</h3>
+        <p class="dossier-stack">STACK &mdash; Python · Streamlit · OpenAI API · Google Translate API</p>
+        <p>Engineered a real-time conversational chatbot using OpenAI's API and Google Translate API.
+          Implemented 5-language compatibility, secure user authentication with registration and login
+          functionality, and a chat history feature to store and retrieve user interactions.</p>
+      </div>
+    </div>
+
+    <div class="dossier">
+      <div class="dossier-num">02</div>
+      <div class="dossier-body">
+        <h3>Pawcare</h3>
+        <p class="dossier-stack">STACK &mdash; Java · Android Studio · Firebase · Google Maps API · Calendar API</p>
+        <p>Developed a full-service pet care application supporting grooming, veterinary appointments, and
+          pet-sitting services through a unified platform. Implemented appointment scheduling, reminders,
+          and service management workflows, integrated with Google Maps, Firebase, and Calendar APIs.</p>
+      </div>
+    </div>
+
+    <div class="dossier">
+      <div class="dossier-num">03</div>
+      <div class="dossier-body">
+        <h3>Online Doctor Appointment Booking System</h3>
+        <p class="dossier-stack">STACK &mdash; Java · JavaFX · MySQL</p>
+        <p>Developed a JavaFX-based doctor appointment booking system using MVC architecture. Implemented
+          authentication, profile management, appointment scheduling, and CRUD functionality, integrated
+          with MySQL for persistent data management and application workflows.</p>
+      </div>
+    </div>
+
+    <div class="dossier">
+      <div class="dossier-num">04</div>
+      <div class="dossier-body">
+        <h3>E-Learning Platform for Students</h3>
+        <p class="dossier-stack">STACK &mdash; Figma</p>
+        <p>Designed an e-learning platform supporting both remote and on-campus students. Created six
+          user-focused screens for communication, coursework tracking, and learning management workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 RESEARCH ============ -->
+  <section id="research" class="sec">
+    <p class="eyebrow">05 / Research</p>
+    <h2 class="sec-title">Publication</h2>
+
+    <div class="citation">
+      <p class="citation-title">Improving Software Quality Framework Using AI Platforms</p>
+      <p class="citation-meta">Peer-reviewed book chapter &middot; Dec 2024 &ndash; Feb 2025</p>
+      <p class="citation-body">
+        Analyzes the integration of AI tools such as Jira and CASE tools within Software Quality
+        Assurance processes. Explores AI-driven defect detection, risk prediction, workflow automation,
+        and Agile/DevOps support.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 06 CREDENTIALS ============ -->
+  <section id="credentials" class="sec">
+    <p class="eyebrow">06 / Credentials</p>
+    <h2 class="sec-title">Certifications</h2>
+
+    <ul class="manifest-list">
+      <li><span class="check">✓</span>Codecademy Java Certification</li>
+      <li><span class="check">✓</span>FreeCodeCamp Responsive Web Design</li>
+      <li><span class="check">✓</span>Jira Fundamentals Badge</li>
+      <li><span class="check">✓</span>Google UX Design Specialization</li>
+      <li><span class="check">✓</span>Front-End Engineer (Codecademy)</li>
+      <li><span class="check">✓</span>IBM Fundamentals of Project Management</li>
+    </ul>
+  </section>
+
+  <!-- ============ 07 UPLINK ============ -->
+  <section id="uplink" class="sec sec-uplink">
+    <p class="eyebrow">07 / Uplink</p>
+    <h2 class="sec-title">Open a channel</h2>
+
+    <div class="uplink-grid">
+      <button class="uplink-field" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
+        <span class="uplink-key">Email</span>
+        <span class="uplink-val">sougandhimanu@gmail.com</span>
+      </button>
+      <button class="uplink-field" data-copy="+1 312-532-3340" data-copy-label="Phone">
+        <span class="uplink-key">Phone</span>
+        <span class="uplink-val">+1 312-532-3340</span>
+      </button>
+      <div class="uplink-field uplink-static">
+        <span class="uplink-key">Location</span>
+        <span class="uplink-val">Detroit, MI, USA</span>
+      </div>
+      <a class="uplink-field" href="https://www.linkedin.com/in/sougandhi-manonmani-pendyala/" target="_blank" rel="noopener">
+        <span class="uplink-key">LinkedIn</span>
+        <span class="uplink-val">/in/sougandhi&#8209;manonmani&#8209;pendyala</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sitefoot">
+  <span>&copy; <span id="year"></span> Sougandhi Manonmani Pendyala</span>
+  <a href="#top">Back to top &uarr;</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
