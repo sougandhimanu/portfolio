@@ -499,6 +499,17 @@ main { padding-top: 52px; }
   margin-bottom: 0.75rem;
 }
 .dossier-body p:last-child { color: var(--ink-muted); max-width: 62ch; }
+.dossier-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-family: var(--f-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, gap 0.2s ease;
+}
+.dossier-link:hover { border-bottom-color: var(--accent); }
 
 /* ============================================
    05 Research
@@ -507,9 +518,11 @@ main { padding-top: 52px; }
   border-left: 3px solid var(--accent);
   padding: 0.25rem 0 0.25rem 1.75rem;
 }
+.citation + .citation { margin-top: 2rem; }
 .citation-title { font-family: var(--f-display); font-weight: 600; font-size: 1.3rem; margin-bottom: 0.5rem; }
 .citation-meta { font-family: var(--f-mono); font-size: 0.8rem; color: var(--ink-faint); margin-bottom: 1rem; }
-.citation-body { color: var(--ink-muted); max-width: 62ch; }
+.citation-body { color: var(--ink-muted); max-width: 62ch; margin-bottom: 0.75rem; }
+.citation .dossier-link { margin-top: 0; }
 
 /* ============================================
    06 Credentials
