@@ -48,18 +48,6 @@
     if (e.key === 'Escape') closeRail();
   });
 
-  /* ---------- Live clock (Detroit-relative local time) ---------- */
-  const clockEl = document.getElementById('clock');
-  const tickClock = () => {
-    const now = new Date();
-    const h = String(now.getHours()).padStart(2, '0');
-    const m = String(now.getMinutes()).padStart(2, '0');
-    const s = String(now.getSeconds()).padStart(2, '0');
-    clockEl.textContent = `${h}:${m}:${s}`;
-  };
-  tickClock();
-  setInterval(tickClock, 1000);
-
   /* ---------- Scroll: progress % + rail scrollspy ---------- */
   const scrollPctEl = document.getElementById('scrollPct');
   const railLinks = Array.from(document.querySelectorAll('.rail-list a'));
