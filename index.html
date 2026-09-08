@@ -92,28 +92,28 @@
 
     <ol class="entry-log">
       <li class="entry"><span class="entry-tag tag-feature">FEATURE</span>
-        <p>Designed and delivered a full-stack seller migration feature using Spring Boot REST APIs and React, enabling merchants to manage BIL migration workflows with merchant access validation and achieving 100% unit test coverage.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-arch">ARCHITECTURE</span>
-        <p>Implemented event-driven asynchronous offer expansion processing using AWS SQS FIFO queues, including queue consumers, filter-chain logic, dead-letter queue handling, and multi-tier CloudWatch alerting.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-platform">PLATFORM</span>
-        <p>Built a dynamic traffic-shaping system using AWS AppConfig and policy-based controls, enabling real-time rate-limit adjustments across AWS regions without service redeployments.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-perf">PERFORMANCE</span>
-        <p>Configured deployment pipelines and optimized Java microservices through JVM tuning, startup automation scripts, service health monitoring, and production-readiness enhancements.</p></li>
+        <p>Shipped a self-service BIL migration workflow using Spring Boot REST APIs and React with merchant access validation, replacing an ops-mediated process; achieved 100% unit coverage with Vitest.</p></li>
 
       <li class="entry"><span class="entry-tag tag-frontend">FRONTEND</span>
-        <p>Developed a React-based cooldown mechanism with localStorage persistence and polling hooks, ensuring seamless state recovery and improved user experience across browser sessions.</p></li>
+        <p>Built the Expansion Preferences page end-to-end in React with Zustand, enabling self-service configuration of multiple offer expansion preferences and reducing turnaround time by 25%.</p></li>
 
-      <li class="entry"><span class="entry-tag tag-testing">TESTING</span>
-        <p>Authored unit tests using JUnit and Mockito, integration tests, and frontend functional tests using Vitest, achieving 98%+ code coverage across backend and frontend services.</p></li>
+      <li class="entry"><span class="entry-tag tag-arch">ARCHITECTURE</span>
+        <p>Re-architected offer expansion from synchronous request-blocking to an event-driven SQS FIFO pipeline, adding ordered consumers, filter-chain routing, DLQ recovery, and tiered CloudWatch alarms.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-platform">PLATFORM</span>
+        <p>Built policy-driven traffic shaping on AWS AppConfig, giving on-call a config-push lever to change rate limits across regions in minutes — work that previously required a full service deployment.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-frontend">FRONTEND</span>
+        <p>Built a React cooldown mechanism with localStorage persistence and polling hooks, preserving workflow state across refreshes and session breaks and reducing duplicate submissions by 40%.</p></li>
 
       <li class="entry"><span class="entry-tag tag-oncall">ON-CALL</span>
-        <p>Participated in on-call rotations, resolved production incidents, performed root-cause analyses, and improved observability through diagnostic logging and monitoring enhancements.</p></li>
+        <p>Carried on-call for the service, resolving incidents, driving RCAs, and adding diagnostic logging and alarms that reduced time-to-diagnose by 30% for recurring failures.</p></li>
+
+      <li class="entry"><span class="entry-tag tag-perf">PERFORMANCE</span>
+        <p>Cut Java microservice cold-start time through improvements across three layers — JVM tuning, startup automation, and deployment pipelines — improving service readiness and reducing initialization overhead.</p></li>
 
       <li class="entry"><span class="entry-tag tag-tooling">TOOLING</span>
-        <p>Leveraged AI-assisted development tools including Claude and Kiro to accelerate feature development, debugging, testing, and engineering productivity.</p></li>
+        <p>Used Claude and Kiro across four development workflows — implementation, test generation, debugging, and iteration — to compress feature turnaround while maintaining production-quality code.</p></li>
     </ol>
   </section>
 
