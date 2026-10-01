@@ -8,44 +8,55 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<div class="sky" aria-hidden="true"></div>
+
 <!-- ============ STATUS BAR ============ -->
 <header class="statusbar" id="statusbar">
-  <a href="#top" class="statusbar-id">Sougandhi&nbsp;/&nbsp;Pendyala</a>
+  <a href="#top" class="statusbar-id">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1.5 6 13h5l-2.5 9.5L18 10h-5.5z" fill="currentColor"/></svg>
+    Sougandhi&nbsp;Pendyala
+  </a>
   <div class="statusbar-right">
     <span class="statusbar-scroll" id="scrollPct">00%</span>
     <button class="theme-switch" id="themeToggle" aria-label="Toggle color theme">
       <span class="theme-switch-track"><span class="theme-switch-thumb"></span></span>
-      <span class="theme-switch-label" id="themeLabel">DARK</span>
+      <span class="theme-switch-label" id="themeLabel">NOX</span>
     </button>
-    <button class="index-toggle" id="indexToggle" aria-label="Open section index" aria-expanded="false">INDEX</button>
+    <button class="index-toggle" id="indexToggle" aria-label="Open section index" aria-expanded="false">MAP</button>
   </div>
 </header>
 
 <!-- ============ INDEX RAIL (desktop) / OVERLAY (mobile) ============ -->
 <nav class="rail" id="rail">
-  <p class="rail-heading">Index</p>
+  <p class="rail-heading">The Marauder's Index</p>
   <ol class="rail-list">
-    <li><a href="#manifest" data-target="manifest"><span class="rail-num">00</span>Manifest</a></li>
-    <li><a href="#log" data-target="log"><span class="rail-num">01</span>Log</a></li>
-    <li><a href="#education" data-target="education"><span class="rail-num">02</span>Education</a></li>
-    <li><a href="#capabilities" data-target="capabilities"><span class="rail-num">03</span>Capabilities</a></li>
-    <li><a href="#casefiles" data-target="casefiles"><span class="rail-num">04</span>Case&nbsp;Files</a></li>
-    <li><a href="#research" data-target="research"><span class="rail-num">05</span>Research</a></li>
-    <li><a href="#credentials" data-target="credentials"><span class="rail-num">06</span>Credentials</a></li>
-    <li><a href="#uplink" data-target="uplink"><span class="rail-num">07</span>Uplink</a></li>
+    <li><a href="#manifest" data-target="manifest"><span class="rail-num">I</span>The Coder</a></li>
+    <li><a href="#log" data-target="log"><span class="rail-num">II</span>Ministry Records</a></li>
+    <li><a href="#education" data-target="education"><span class="rail-num">III</span>School Years</a></li>
+    <li><a href="#capabilities" data-target="capabilities"><span class="rail-num">IV</span>Spellbook</a></li>
+    <li><a href="#casefiles" data-target="casefiles"><span class="rail-num">V</span>Room of Requirement</a></li>
+    <li><a href="#research" data-target="research"><span class="rail-num">VI</span>Restricted Section</a></li>
+    <li><a href="#credentials" data-target="credentials"><span class="rail-num">VII</span>Order of Merit</a></li>
+    <li><a href="#uplink" data-target="uplink"><span class="rail-num">VIII</span>Owl Post</a></li>
   </ol>
+  <p class="rail-motto">&ldquo;I solemnly swear that I am up to no good.&rdquo;</p>
 </nav>
 
 <main id="top">
 
-  <!-- ============ 00 MANIFEST ============ -->
+  <!-- ============ I · THE CODER ============ -->
   <section id="manifest" class="sec sec-manifest">
-    <p class="eyebrow">00 / Manifest</p>
+    <div class="candles" aria-hidden="true">
+      <span class="candle"></span><span class="candle"></span><span class="candle"></span>
+      <span class="candle"></span><span class="candle"></span><span class="candle"></span>
+    </div>
+
+    <p class="eyebrow">Chapter One</p>
 
     <div class="manifest-grid">
       <div class="manifest-main">
@@ -60,8 +71,13 @@
           software engineering, distributed systems, data structures, and algorithms.
         </p>
 
+        <blockquote class="epigraph">
+          &ldquo;Happiness can be found even in the darkest of times, if one only remembers to turn on the light.&rdquo;
+          <cite>&mdash; Albus Dumbledore</cite>
+        </blockquote>
+
         <div class="manifest-actions">
-          <a href="SSPM.pdf" download class="btn-hard">Download résumé <span class="arrow">↓</span></a>
+          <a href="SSPM.pdf" download class="btn-hard">Accio résumé <span class="arrow">↓</span></a>
           <button class="btn-hard btn-hard-outline" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
             sougandhimanu@gmail.com
           </button>
@@ -69,19 +85,21 @@
       </div>
 
       <aside class="manifest-record" aria-label="Current status">
+        <p class="record-title">Wizarding Registry</p>
         <dl>
           <div class="record-row"><dt>Role</dt><dd>Software Development Engineer</dd></div>
           <div class="record-row"><dt>Company</dt><dd>Amazon</dd></div>
           <div class="record-row"><dt>Location</dt><dd>Detroit, MI, USA</dd></div>
           <div class="record-row"><dt>Since</dt><dd>Sep 2025</dd></div>
         </dl>
+        <span class="seal" aria-hidden="true">SP</span>
       </aside>
     </div>
   </section>
 
-  <!-- ============ 01 LOG ============ -->
+  <!-- ============ II · MINISTRY RECORDS ============ -->
   <section id="log" class="sec">
-    <p class="eyebrow">01 / Log</p>
+    <p class="eyebrow">Chapter Two &middot; Ministry Records</p>
     <h2 class="sec-title">Deployment record</h2>
 
     <div class="deploy-head">
@@ -116,13 +134,13 @@
     </ol>
   </section>
 
-  <!-- ============ 02 EDUCATION ============ -->
+  <!-- ============ III · SCHOOL YEARS ============ -->
   <section id="education" class="sec">
-    <p class="eyebrow">02 / Education</p>
+    <p class="eyebrow">Chapter Three &middot; School Years</p>
     <h2 class="sec-title">Education</h2>
 
     <div class="edu-block">
-      <div class="edu-gpa">4.0</div>
+      <div class="edu-gpa">4.0<span>Outstanding</span></div>
       <div class="edu-info">
         <h3>Master of Information Technology and Management</h3>
         <p class="edu-org">Illinois Institute of Technology &middot; Chicago, USA</p>
@@ -131,10 +149,10 @@
     </div>
   </section>
 
-  <!-- ============ 03 CAPABILITIES ============ -->
+  <!-- ============ IV · SPELLBOOK ============ -->
   <section id="capabilities" class="sec">
-    <p class="eyebrow">03 / Capabilities</p>
-    <h2 class="sec-title">Stack</h2>
+    <p class="eyebrow">Chapter Four &middot; Spellbook</p>
+    <h2 class="sec-title">The standard book of spells</h2>
 
     <div class="stack-layers">
       <div class="stack-layer">
@@ -168,10 +186,10 @@
     </div>
   </section>
 
-  <!-- ============ 04 CASE FILES ============ -->
+  <!-- ============ V · ROOM OF REQUIREMENT ============ -->
   <section id="casefiles" class="sec">
-    <p class="eyebrow">04 / Case Files</p>
-    <h2 class="sec-title">Projects</h2>
+    <p class="eyebrow">Chapter Five &middot; Room of Requirement</p>
+    <h2 class="sec-title">Things I've conjured</h2>
 
     <div class="dossier">
       <div class="dossier-num">01</div>
@@ -228,9 +246,9 @@
     </div>
   </section>
 
-  <!-- ============ 05 RESEARCH ============ -->
+  <!-- ============ VI · RESTRICTED SECTION ============ -->
   <section id="research" class="sec">
-    <p class="eyebrow">05 / Research</p>
+    <p class="eyebrow">Chapter Six &middot; Restricted Section</p>
     <h2 class="sec-title">Publications</h2>
 
     <div class="citation">
@@ -250,25 +268,25 @@
     </div>
   </section>
 
-  <!-- ============ 06 CREDENTIALS ============ -->
+  <!-- ============ VII · ORDER OF MERIT ============ -->
   <section id="credentials" class="sec">
-    <p class="eyebrow">06 / Credentials</p>
+    <p class="eyebrow">Chapter Seven &middot; Order of Merit</p>
     <h2 class="sec-title">Certifications</h2>
 
     <ul class="manifest-list">
-      <li><span class="check">✓</span>Codecademy Java Certification</li>
-      <li><span class="check">✓</span>FreeCodeCamp Responsive Web Design</li>
-      <li><span class="check">✓</span>Jira Fundamentals Badge</li>
-      <li><span class="check">✓</span>Google UX Design Specialization</li>
-      <li><span class="check">✓</span>Front-End Engineer (Codecademy)</li>
-      <li><span class="check">✓</span>IBM Fundamentals of Project Management</li>
+      <li><span class="check">✦</span>Codecademy Java Certification</li>
+      <li><span class="check">✦</span>FreeCodeCamp Responsive Web Design</li>
+      <li><span class="check">✦</span>Jira Fundamentals Badge</li>
+      <li><span class="check">✦</span>Google UX Design Specialization</li>
+      <li><span class="check">✦</span>Front-End Engineer (Codecademy)</li>
+      <li><span class="check">✦</span>IBM Fundamentals of Project Management</li>
     </ul>
   </section>
 
-  <!-- ============ 07 UPLINK ============ -->
+  <!-- ============ VIII · OWL POST ============ -->
   <section id="uplink" class="sec sec-uplink">
-    <p class="eyebrow">07 / Uplink</p>
-    <h2 class="sec-title">Open a channel</h2>
+    <p class="eyebrow">Chapter Eight &middot; Owl Post</p>
+    <h2 class="sec-title">Send an <em>owl</em></h2>
 
     <div class="uplink-grid">
       <button class="uplink-field" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
@@ -293,7 +311,7 @@
 </main>
 
 <footer class="sitefoot">
-  <span>&copy; <span id="year"></span> Sougandhi Manonmani Pendyala</span>
+  <span>&copy; <span id="year"></span> Sougandhi Manonmani Pendyala &middot; <i>Mischief managed.</i></span>
   <a href="#top">Back to top &uarr;</a>
 </footer>
 

@@ -15,7 +15,7 @@
   };
 
   const syncThemeLabel = () => {
-    themeLabel.textContent = currentTheme() === 'dark' ? 'LIGHT' : 'DARK';
+    themeLabel.textContent = currentTheme() === 'dark' ? 'LUMOS' : 'NOX';
   };
   syncThemeLabel();
 
