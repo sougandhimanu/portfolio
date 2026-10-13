@@ -594,7 +594,7 @@ main { padding-top: 54px; }
   padding: 1.4rem 1.5rem;
   margin-bottom: 2.5rem;
 }
-@media (min-width: 640px) { .deploy-head { grid-template-columns: repeat(2, auto); } }
+@media (min-width: 640px) { .deploy-head { grid-template-columns: repeat(3, auto); } }
 .deploy-head > div { display: flex; flex-direction: column; gap: 0.2rem; }
 .deploy-head .dt {
   font-family: var(--f-head);
@@ -658,6 +658,7 @@ main { padding-top: 54px; }
   padding: 2.2rem 2.4rem;
   max-width: 660px;
 }
+.edu-block + .edu-block { margin-top: 1.5rem; }
 .edu-gpa {
   display: flex;
   flex-direction: column;
