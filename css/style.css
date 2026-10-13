@@ -658,7 +658,6 @@ main { padding-top: 54px; }
   padding: 2.2rem 2.4rem;
   max-width: 660px;
 }
-.edu-block + .edu-block { margin-top: 1.5rem; }
 .edu-gpa {
   display: flex;
   flex-direction: column;
@@ -832,6 +831,7 @@ main { padding-top: 54px; }
 }
 .uplink-field:hover { background: var(--paper-alt); }
 .uplink-static:hover { background: var(--paper); }
+.uplink-wide { grid-column: 1 / -1; }
 .uplink-key {
   font-family: var(--f-head);
   font-weight: 600;
