@@ -4,329 +4,384 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sougandhi Manonmani Pendyala — Software Development Engineer</title>
-<meta name="description" content="Sougandhi Manonmani Pendyala — Software Development Engineer at Amazon. Distributed systems, event-driven services, full-stack engineering.">
+<meta name="description" content="Sougandhi Manonmani Pendyala — Software Development Engineer. Distributed systems, event-driven services, full-stack engineering.">
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="sky" aria-hidden="true"></div>
+<!-- Shared gradients for the chocolates -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="gDark" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#6b4129"/><stop offset="1" stop-color="#26140a"/></radialGradient>
+    <radialGradient id="gMilk" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#b47a4c"/><stop offset="1" stop-color="#6a3d20"/></radialGradient>
+    <radialGradient id="gWhite" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#e2cca5"/></radialGradient>
+    <radialGradient id="gRuby" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#ee8ea0"/><stop offset="1" stop-color="#a23550"/></radialGradient>
+    <radialGradient id="gCaramel" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f7c46e"/><stop offset="1" stop-color="#ad6a22"/></radialGradient>
+    <radialGradient id="gRed" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#e2574d"/><stop offset="1" stop-color="#861a14"/></radialGradient>
+    <radialGradient id="gPink" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#f3b3bd"/><stop offset="1" stop-color="#b3606f"/></radialGradient>
+  </defs>
+</svg>
 
-<!-- ============ STATUS BAR ============ -->
-<header class="statusbar" id="statusbar">
-  <a href="#top" class="statusbar-id">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1.5 6 13h5l-2.5 9.5L18 10h-5.5z" fill="currentColor"/></svg>
-    Sougandhi&nbsp;Pendyala
-  </a>
-  <div class="statusbar-right">
-    <span class="statusbar-scroll" id="scrollPct">00%</span>
-    <button class="theme-switch" id="themeToggle" aria-label="Toggle color theme">
-      <span class="theme-switch-track"><span class="theme-switch-thumb"></span></span>
-      <span class="theme-switch-label" id="themeLabel">NOX</span>
-    </button>
-    <button class="index-toggle" id="indexToggle" aria-label="Open section index" aria-expanded="false">MAP</button>
+<!-- ============ THE STUDY TABLE ============ -->
+<main class="desk">
+  <div class="desk-decor" aria-hidden="true">
+    <div class="pencil"></div>
+    <div class="coffee"></div>
   </div>
-</header>
 
-<!-- ============ INDEX RAIL (desktop) / OVERLAY (mobile) ============ -->
-<nav class="rail" id="rail">
-  <p class="rail-heading">The Marauder's Index</p>
-  <ol class="rail-list">
-    <li><a href="#manifest" data-target="manifest"><span class="rail-num">I</span>The Coder</a></li>
-    <li><a href="#log" data-target="log"><span class="rail-num">II</span>Ministry Records</a></li>
-    <li><a href="#education" data-target="education"><span class="rail-num">III</span>School Years</a></li>
-    <li><a href="#capabilities" data-target="capabilities"><span class="rail-num">IV</span>Spellbook</a></li>
-    <li><a href="#casefiles" data-target="casefiles"><span class="rail-num">V</span>Room of Requirement</a></li>
-    <li><a href="#research" data-target="research"><span class="rail-num">VI</span>Restricted Section</a></li>
-    <li><a href="#credentials" data-target="credentials"><span class="rail-num">VII</span>Order of Merit</a></li>
-    <li><a href="#uplink" data-target="uplink"><span class="rail-num">VIII</span>Owl Post</a></li>
-  </ol>
-</nav>
-
-<main id="top">
-
-  <!-- ============ I · THE CODER ============ -->
-  <section id="manifest" class="sec sec-manifest">
-    <div class="candles" aria-hidden="true">
-      <span class="candle"></span><span class="candle"></span><span class="candle"></span>
-      <span class="candle"></span><span class="candle"></span><span class="candle"></span>
-    </div>
-
-    <p class="eyebrow">Chapter One</p>
-
-    <div class="manifest-grid">
-      <div class="manifest-main">
-        <h1 class="manifest-name">Sougandhi Manonmani<br>Pendyala</h1>
-        <p class="manifest-line">Software engineer for systems that are <em>not allowed</em> to go down.</p>
-
-        <p class="manifest-body">
-          Software Development Engineer at Amazon experienced in building scalable full-stack
-          applications, distributed systems, and cloud-native services using Java, Spring Boot, React,
-          TypeScript, and AWS. Skilled in event-driven architectures, REST APIs, automated testing, and
-          operational monitoring — with a strong foundation in software engineering, distributed systems,
-          data structures, and algorithms.
-        </p>
-
-        <div class="manifest-actions">
-          <a href="SougandhiManonmaniPendyalaResume.pdf" download class="btn-hard">Accio résumé <span class="arrow">↓</span></a>
-          <button class="btn-hard btn-hard-outline" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
-            sougandhimanu@gmail.com
-          </button>
-        </div>
-      </div>
-
-      <aside class="manifest-record" aria-label="Current status">
-        <p class="record-title">Wizarding Registry</p>
-        <dl>
-          <div class="record-row"><dt>Role</dt><dd>Software Development Engineer</dd></div>
-          <div class="record-row"><dt>Company</dt><dd>Amazon</dd></div>
-          <div class="record-row"><dt>Location</dt><dd>Detroit, MI, USA</dd></div>
-          <div class="record-row"><dt>Tenure</dt><dd>Sep 2025 &ndash; Oct 2026</dd></div>
-        </dl>
-        <span class="seal" aria-hidden="true">SP</span>
-      </aside>
-    </div>
-  </section>
-
-  <!-- ============ II · MINISTRY RECORDS ============ -->
-  <section id="log" class="sec">
-    <p class="eyebrow">Chapter Two &middot; Ministry Records</p>
-    <h2 class="sec-title">Deployment record</h2>
-
-    <div class="deploy-head">
-      <div><span class="dt">Deploy</span><span class="dd">Software Development Engineer</span></div>
-      <div><span class="dt">Target</span><span class="dd">Amazon &middot; Detroit, MI, USA</span></div>
-      <div><span class="dt">Period</span><span class="dd">Sep 2025 &ndash; Oct 2026</span></div>
-    </div>
-
-    <ol class="entry-log">
-      <li class="entry"><span class="entry-tag tag-feature">FEATURE</span>
-        <p>Shipped a self-service BIL migration workflow using Spring Boot REST APIs and React with merchant access validation, replacing an ops-mediated process; achieved 100% unit coverage with Vitest.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-frontend">FRONTEND</span>
-        <p>Built the Expansion Preferences page end-to-end in React with Zustand, enabling self-service configuration of multiple offer expansion preferences and reducing turnaround time by 25%.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-arch">ARCHITECTURE</span>
-        <p>Re-architected offer expansion from synchronous request-blocking to an event-driven SQS FIFO pipeline, adding ordered consumers, filter-chain routing, DLQ recovery, and tiered CloudWatch alarms.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-platform">PLATFORM</span>
-        <p>Built policy-driven traffic shaping on AWS AppConfig, giving on-call a config-push lever to change rate limits across regions in minutes — work that previously required a full service deployment.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-frontend">FRONTEND</span>
-        <p>Built a React cooldown mechanism with localStorage persistence and polling hooks, preserving workflow state across refreshes and session breaks and reducing duplicate submissions by 40%.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-oncall">ON-CALL</span>
-        <p>Carried on-call for the service, resolving incidents, driving RCAs, and adding diagnostic logging and alarms that reduced time-to-diagnose by 30% for recurring failures.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-perf">PERFORMANCE</span>
-        <p>Cut Java microservice cold-start time through improvements across three layers — JVM tuning, startup automation, and deployment pipelines — improving service readiness and reducing initialization overhead.</p></li>
-
-      <li class="entry"><span class="entry-tag tag-tooling">TOOLING</span>
-        <p>Used Claude and Kiro across four development workflows — implementation, test generation, debugging, and iteration — to compress feature turnaround while maintaining production-quality code.</p></li>
-    </ol>
-  </section>
-
-  <!-- ============ III · SCHOOL YEARS ============ -->
-  <section id="education" class="sec">
-    <p class="eyebrow">Chapter Three &middot; School Years</p>
-    <h2 class="sec-title">Education</h2>
-
-    <div class="edu-block">
-      <div class="edu-gpa">4.0<span>Outstanding</span></div>
-      <div class="edu-info">
-        <h3>Master of Information Technology and Management</h3>
-        <p class="edu-org">Illinois Institute of Technology &middot; Chicago, USA</p>
-        <p class="edu-gpa-label">CGPA 4.0 / 4.0 &middot; Aug 2023 &ndash; May 2025</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ IV · SPELLBOOK ============ -->
-  <section id="capabilities" class="sec">
-    <p class="eyebrow">Chapter Four &middot; Spellbook</p>
-    <h2 class="sec-title">The standard book of spells</h2>
-
-    <div class="stack-layers">
-      <div class="stack-layer">
-        <span class="stack-label">Languages</span>
-        <span class="stack-items">Java · TypeScript · JavaScript · Python · SQL · HTML · CSS</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">Full Stack</span>
-        <span class="stack-items">React · Redux · Spring Boot · REST APIs · Microservices · Distributed Systems</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">Cloud &amp; AWS</span>
-        <span class="stack-items">AWS CDK · SQS · DynamoDB · CloudWatch · IAM · AppConfig</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">AI &amp; LLMs</span>
-        <span class="stack-items">Claude API · OpenAI API · Tool Calling · AI Agents · Prompt Engineering · TensorFlow.js</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">DevOps &amp; Tools</span>
-        <span class="stack-items">Docker · Kubernetes · CI/CD · Git · GitHub · GitLab · Jira · Claude · Kiro</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">Testing</span>
-        <span class="stack-items">JUnit · Mockito · Vitest · Integration Testing · Functional Testing</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">Core CS</span>
-        <span class="stack-items">Data Structures · Algorithms · Object-Oriented Programming</span>
-      </div>
-      <div class="stack-layer">
-        <span class="stack-label">Collaboration</span>
-        <span class="stack-items">Problem Solving · Communication · Cross-Functional Collaboration · Agile Methodologies</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ V · ROOM OF REQUIREMENT ============ -->
-  <section id="casefiles" class="sec">
-    <p class="eyebrow">Chapter Five &middot; Room of Requirement</p>
-    <h2 class="sec-title">Things I've conjured</h2>
-
-    <div class="dossier">
-      <div class="dossier-num">01</div>
-      <div class="dossier-body">
-        <h3>Mail Scheduler Agent</h3>
-        <p class="dossier-stack">STACK &mdash; Python · FastAPI · Supabase · Claude · Gmail API</p>
-        <p>Built a Claude agent that schedules emails from plain-English requests. Supabase Edge Functions
-          and pg_cron send the messages through the Gmail API, with retries for failed sends.</p>
-      </div>
-    </div>
-
-    <div class="dossier">
-      <div class="dossier-num">02</div>
-      <div class="dossier-body">
-        <h3>PlatePix3D</h3>
-        <p class="dossier-stack">STACK &mdash; Next.js · TypeScript · TensorFlow.js · Three.js · Tailwind</p>
-        <p>Built a prototype that turns dish photos into 3D menu models using MobileNet (TensorFlow.js)
-          and react-three-fiber, and added inventory forecasting.</p>
-        <a class="dossier-link" href="https://github.com/sougandhimanu/platepix3d" target="_blank" rel="noopener">View repository on GitHub &rarr;</a>
-      </div>
-    </div>
-
-    <div class="dossier">
-      <div class="dossier-num">03</div>
-      <div class="dossier-body">
-        <h3>Multi Language AI Chatbot</h3>
-        <p class="dossier-stack">STACK &mdash; Python · Streamlit · OpenAI API · Google Translate API</p>
-        <p>Engineered a 5-language chatbot using the OpenAI and Google Translate APIs, with secure
-          authentication and persistent chat history for user interactions.</p>
-      </div>
-    </div>
-
-    <div class="dossier">
-      <div class="dossier-num">04</div>
-      <div class="dossier-body">
-        <h3>Pawcare</h3>
-        <p class="dossier-stack">STACK &mdash; Java · Android Studio · Firebase · Google Maps API · Calendar API</p>
-        <p>Developed a pet care app for grooming, vet appointments, and pet-sitting with scheduling and
-          reminders; integrated Google Maps, Firebase, and Calendar APIs.</p>
-        <a class="dossier-link" href="https://github.com/sougandhimanu/pawcare" target="_blank" rel="noopener">View repository on GitHub &rarr;</a>
-      </div>
-    </div>
-
-    <div class="dossier">
-      <div class="dossier-num">05</div>
-      <div class="dossier-body">
-        <h3>Online Doctor Appointment Booking System</h3>
-        <p class="dossier-stack">STACK &mdash; Java · JavaFX · MySQL</p>
-        <p>Developed a JavaFX-based doctor appointment booking system using MVC architecture. Implemented
-          authentication, profile management, appointment scheduling, and CRUD functionality, integrated
-          with MySQL for persistent data management and application workflows.</p>
-      </div>
-    </div>
-
-    <div class="dossier">
-      <div class="dossier-num">06</div>
-      <div class="dossier-body">
-        <h3>E-Learning Platform for Students</h3>
-        <p class="dossier-stack">STACK &mdash; Figma</p>
-        <p>Designed an e-learning platform supporting both remote and on-campus students. Created six
-          user-focused screens for communication, coursework tracking, and learning management workflows.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ VI · RESTRICTED SECTION ============ -->
-  <section id="research" class="sec">
-    <p class="eyebrow">Chapter Six &middot; Restricted Section</p>
-    <h2 class="sec-title">Publications</h2>
-
-    <div class="citation">
-      <p class="citation-title">Improving Software Quality Framework Using AI Platforms</p>
-      <p class="citation-meta">Peer-reviewed book chapter &middot; Dec 2024 &ndash; Feb 2025</p>
-      <p class="citation-body">
-        Analyzes the integration of AI tools such as Jira and CASE tools within Software Quality
-        Assurance processes. Explores AI-driven defect detection, risk prediction, workflow automation,
-        and Agile/DevOps support.
-      </p>
-      <a class="dossier-link" href="https://www.igi-global.com/chapter/improving-software-quality-framework-using-artificial-intelligence-platforms/377674" target="_blank" rel="noopener">Read the chapter on IGI Global &rarr;</a>
-    </div>
-
-    <div class="citation">
-      <p class="citation-title">Satellite Systems-Space Debris: Survey</p>
-      <a class="dossier-link" href="https://ijirt.org/article?manuscript=151679" target="_blank" rel="noopener">Read the article on IJIRT &rarr;</a>
-    </div>
-  </section>
-
-  <!-- ============ VII · ORDER OF MERIT ============ -->
-  <section id="credentials" class="sec">
-    <p class="eyebrow">Chapter Seven &middot; Order of Merit</p>
-    <h2 class="sec-title">Certifications</h2>
-
-    <ul class="manifest-list">
-      <li><span class="check">✦</span>Codecademy Java Certification</li>
-      <li><span class="check">✦</span>FreeCodeCamp Responsive Web Design</li>
-      <li><span class="check">✦</span>Jira Fundamentals Badge</li>
-      <li><span class="check">✦</span>Google UX Design Specialization</li>
-      <li><span class="check">✦</span>Front-End Engineer (Codecademy)</li>
-      <li><span class="check">✦</span>IBM Fundamentals of Project Management</li>
-      <li><span class="check">✦</span>Foundations of Modern Machine Learning (iHub-Data, IIIT Hyderabad)</li>
+  <aside class="now-note" aria-label="What I'm working on now">
+    <span class="pin" aria-hidden="true"></span>
+    <p class="now-title">Currently working on&hellip;</p>
+    <ul>
+      <li>AI safety</li>
+      <li>AI reliability</li>
+      <li>Responsible AI</li>
     </ul>
-  </section>
+  </aside>
 
-  <!-- ============ VIII · OWL POST ============ -->
-  <section id="uplink" class="sec sec-uplink">
-    <p class="eyebrow">Chapter Eight &middot; Owl Post</p>
-    <h2 class="sec-title">Send an <em>owl</em></h2>
+  <p class="sticky-note"><span class="hint-mouse">Click a page to turn it &rarr;</span><span class="hint-touch">Swipe to turn the pages &rarr;</span><br>and try a chocolate!</p>
 
-    <div class="uplink-grid">
-      <button class="uplink-field" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">
-        <span class="uplink-key">Email</span>
-        <span class="uplink-val">sougandhimanu@gmail.com</span>
-      </button>
-      <button class="uplink-field" data-copy="+1 312-532-3340" data-copy-label="Phone">
-        <span class="uplink-key">Phone</span>
-        <span class="uplink-val">+1 312-532-3340</span>
-      </button>
-      <div class="uplink-field uplink-static">
-        <span class="uplink-key">Location</span>
-        <span class="uplink-val">Detroit, MI, USA</span>
+  <section class="book-area" aria-label="Portfolio book">
+    <div class="book-wrap">
+      <div class="bookmarks" id="tabs" aria-label="Jump to a chapter">
+        <button type="button" data-page="0" style="--c:#c0392b">Profile</button>
+        <button type="button" data-page="1" style="--c:#e67e22">About</button>
+        <button type="button" data-page="2" style="--c:#d4a017">Experience</button>
+        <button type="button" data-page="4" style="--c:#27ae60">Education</button>
+        <button type="button" data-page="5" style="--c:#16a085">Skills</button>
+        <button type="button" data-page="6" style="--c:#2980b9">Projects</button>
+        <button type="button" data-page="8" style="--c:#8e44ad">Publications</button>
+        <button type="button" data-page="9" style="--c:#d35480">Certifications</button>
+        <button type="button" data-page="10" style="--c:#6d4c41">Contact</button>
       </div>
-      <a class="uplink-field" href="https://www.linkedin.com/in/sougandhi-manonmani-pendyala/" target="_blank" rel="noopener">
-        <span class="uplink-key">LinkedIn</span>
-        <span class="uplink-val">/in/sougandhi&#8209;manonmani&#8209;pendyala</span>
-      </a>
-      <a class="uplink-field uplink-wide" href="https://github.com/sougandhimanu" target="_blank" rel="noopener">
-        <span class="uplink-key">GitHub</span>
-        <span class="uplink-val">github.com/sougandhimanu</span>
-      </a>
+      <div class="book" id="book">
+
+      <!-- Page 0 · Profile -->
+      <article class="page page-profile" data-label="Profile">
+        <figure class="polaroid" id="polaroid" title="Click me!">
+          <div class="polaroid-photo">
+            <svg class="girl" viewBox="0 0 200 200" role="img" aria-label="Illustration of Sougandhi waving">
+              <defs>
+                <linearGradient id="girlBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe1cf"/><stop offset="1" stop-color="#f7b9a6"/></linearGradient>
+              </defs>
+              <rect width="200" height="200" fill="url(#girlBg)"/>
+              <circle cx="36" cy="40" r="14" fill="#fff" opacity="0.35"/>
+              <circle cx="168" cy="30" r="9" fill="#fff" opacity="0.3"/>
+              <circle cx="172" cy="74" r="5" fill="#fff" opacity="0.35"/>
+              <path d="M56,96 C50,52 76,28 102,28 C130,28 152,50 148,96 C152,126 154,154 142,176 L62,176 C50,154 52,126 56,96 Z" fill="#2a1712"/>
+              <path d="M38,200 C40,168 70,150 102,150 C134,150 162,168 164,200 Z" fill="#2f7a7d"/>
+              <path d="M86,152 L102,170 L118,152" fill="none" stroke="#f2b33d" stroke-width="3" stroke-linejoin="round"/>
+              <rect x="92" y="128" width="20" height="26" rx="8" fill="#b97a54"/>
+              <circle cx="68" cy="102" r="6.5" fill="#c98c63"/>
+              <circle cx="136" cy="102" r="6.5" fill="#c98c63"/>
+              <circle cx="68" cy="113" r="3" fill="#f2b33d"/>
+              <circle cx="136" cy="113" r="3" fill="#f2b33d"/>
+              <ellipse cx="102" cy="98" rx="34" ry="40" fill="#c98c63"/>
+              <path d="M67,94 C64,62 84,52 104,53 C124,54 140,66 138,92 C128,74 114,68 98,70 C86,72 74,80 67,94 Z" fill="#2a1712"/>
+              <path d="M83,86 q8,-5 15,0" stroke="#2a1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <path d="M107,86 q8,-5 15,0" stroke="#2a1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <g class="eyes">
+                <ellipse cx="91" cy="99" rx="3.6" ry="4.4" fill="#2a1712"/>
+                <ellipse cx="114" cy="99" rx="3.6" ry="4.4" fill="#2a1712"/>
+              </g>
+              <g fill="none" stroke="#3b2a20" stroke-width="2">
+                <circle cx="91" cy="99" r="10"/>
+                <circle cx="114" cy="99" r="10"/>
+                <path d="M101,99 h3"/>
+              </g>
+              <circle cx="82" cy="114" r="5" fill="#e48a7a" opacity="0.45"/>
+              <circle cx="123" cy="114" r="5" fill="#e48a7a" opacity="0.45"/>
+              <path d="M102,104 q2.5,6 -2,8" stroke="#a96d48" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M92,120 q10,9 21,0" stroke="#7a3b2a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <g class="wave-arm">
+                <path d="M150,200 C151,180 156,162 163,150" stroke="#2f7a7d" stroke-width="16" stroke-linecap="round" fill="none"/>
+                <circle cx="165" cy="140" r="10" fill="#c98c63"/>
+                <path d="M160,131 v-7 M165,130 v-9 M170,131 v-7" stroke="#c98c63" stroke-width="4" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption>hi, that's me!</figcaption>
+          <span class="tape tape-l" aria-hidden="true"></span>
+          <span class="tape tape-r" aria-hidden="true"></span>
+        </figure>
+
+        <h1 class="p-name">Sougandhi Manonmani Pendyala</h1>
+        <p class="p-role">Software Development Engineer</p>
+        <ul class="p-facts">
+          <li>Amazon &middot; Sep 2025 &ndash; Oct 2026</li>
+          <li>Detroit, MI, USA</li>
+          <li>M.S. IT &amp; Management &middot; Illinois Tech &middot; 4.0</li>
+        </ul>
+        <div class="p-actions">
+          <a class="ink-btn" href="SougandhiManonmaniPendyalaResume.pdf" download>Download résumé &darr;</a>
+          <button class="ink-btn ink-btn-outline" type="button" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">Copy email</button>
+        </div>
+      </article>
+
+      <!-- Page 1 · About -->
+      <article class="page" data-label="About">
+        <p class="kicker">Chapter 1</p>
+        <h2>About me</h2>
+        <p class="lede">Software engineer for systems that are <em>not allowed</em> to go down.</p>
+        <p>Software Development Engineer at Amazon experienced in building scalable full-stack applications,
+          distributed systems, and cloud-native services using Java, Spring Boot, React, TypeScript, and AWS.</p>
+        <p>Skilled in event-driven architectures, REST APIs, automated testing, and operational monitoring &mdash;
+          with a strong foundation in software engineering, distributed systems, data structures, and algorithms.</p>
+        <p class="margin-note">Turn the page to read on &mdash; and the box of chocolates on the desk holds everything I do off the clock.</p>
+      </article>
+
+      <!-- Page 2 · Experience I -->
+      <article class="page" data-label="Experience">
+        <p class="kicker">Chapter 2</p>
+        <h2>Experience</h2>
+        <p class="role-line"><strong>Software Development Engineer</strong> &middot; Amazon, Detroit, MI<br><span>Sep 2025 &ndash; Oct 2026</span></p>
+        <ul class="bullets">
+          <li><span class="tag">Feature</span>Shipped a self-service BIL migration workflow using Spring Boot REST APIs and React with merchant access validation, replacing an ops-mediated process; achieved 100% unit coverage with Vitest.</li>
+          <li><span class="tag">Frontend</span>Built the Expansion Preferences page end-to-end in React with Zustand, enabling self-service configuration of multiple offer expansion preferences and reducing turnaround time by 25%.</li>
+          <li><span class="tag">Architecture</span>Re-architected offer expansion from synchronous request-blocking to an event-driven SQS FIFO pipeline, adding ordered consumers, filter-chain routing, DLQ recovery, and tiered CloudWatch alarms.</li>
+          <li><span class="tag">Platform</span>Built policy-driven traffic shaping on AWS AppConfig, giving on-call a config-push lever to change rate limits across regions in minutes &mdash; work that previously required a full service deployment.</li>
+        </ul>
+      </article>
+
+      <!-- Page 3 · Experience II -->
+      <article class="page" data-label="Experience (cont.)">
+        <p class="kicker">Chapter 2, continued</p>
+        <h2>&hellip;and more</h2>
+        <ul class="bullets">
+          <li><span class="tag">Frontend</span>Built a React cooldown mechanism with localStorage persistence and polling hooks, preserving workflow state across refreshes and session breaks and reducing duplicate submissions by 40%.</li>
+          <li><span class="tag">On-call</span>Carried on-call for the service, resolving incidents, driving RCAs, and adding diagnostic logging and alarms that reduced time-to-diagnose by 30% for recurring failures.</li>
+          <li><span class="tag">Performance</span>Cut Java microservice cold-start time through improvements across three layers &mdash; JVM tuning, startup automation, and deployment pipelines &mdash; improving service readiness and reducing initialization overhead.</li>
+          <li><span class="tag">Tooling</span>Used Claude and Kiro across four development workflows &mdash; implementation, test generation, debugging, and iteration &mdash; to compress feature turnaround while maintaining production-quality code.</li>
+        </ul>
+      </article>
+
+      <!-- Page 4 · Education -->
+      <article class="page" data-label="Education">
+        <p class="kicker">Chapter 3</p>
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="edu-grade">4.0</div>
+          <div>
+            <h3>Master of Information Technology and Management</h3>
+            <p>Illinois Institute of Technology &middot; Chicago, USA</p>
+            <p class="muted">CGPA 4.0 / 4.0 &middot; Aug 2023 &ndash; May 2025</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Page 5 · Skills -->
+      <article class="page" data-label="Skills">
+        <p class="kicker">Chapter 4</p>
+        <h2>Skills</h2>
+        <dl class="skills">
+          <div><dt>Languages</dt><dd>Java · TypeScript · JavaScript · Python · SQL · HTML · CSS</dd></div>
+          <div><dt>Full Stack</dt><dd>React · Redux · Spring Boot · REST APIs · Microservices · Distributed Systems</dd></div>
+          <div><dt>Cloud &amp; AWS</dt><dd>AWS CDK · SQS · DynamoDB · CloudWatch · IAM · AppConfig</dd></div>
+          <div><dt>AI &amp; LLMs</dt><dd>Claude API · OpenAI API · Tool Calling · AI Agents · Prompt Engineering · TensorFlow.js</dd></div>
+          <div><dt>DevOps &amp; Tools</dt><dd>Docker · Kubernetes · CI/CD · Git · GitHub · GitLab · Jira · Claude · Kiro</dd></div>
+          <div><dt>Testing</dt><dd>JUnit · Mockito · Vitest · Integration Testing · Functional Testing</dd></div>
+          <div><dt>Core CS</dt><dd>Data Structures · Algorithms · Object-Oriented Programming</dd></div>
+          <div><dt>Collaboration</dt><dd>Problem Solving · Communication · Cross-Functional Collaboration · Agile Methodologies</dd></div>
+        </dl>
+      </article>
+
+      <!-- Page 6 · Projects I -->
+      <article class="page" data-label="Projects">
+        <p class="kicker">Chapter 5</p>
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>Mail Scheduler Agent</h3>
+          <p class="stack">Python · FastAPI · Supabase · Claude · Gmail API</p>
+          <p>Built a Claude agent that schedules emails from plain-English requests. Supabase Edge Functions and pg_cron send the messages through the Gmail API, with retries for failed sends.</p>
+        </div>
+        <div class="project">
+          <h3>PlatePix3D</h3>
+          <p class="stack">Next.js · TypeScript · TensorFlow.js · Three.js · Tailwind</p>
+          <p>Built a prototype that turns dish photos into 3D menu models using MobileNet (TensorFlow.js) and react-three-fiber, and added inventory forecasting.</p>
+          <a href="https://github.com/sougandhimanu/platepix3d" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+        <div class="project">
+          <h3>Multi Language AI Chatbot</h3>
+          <p class="stack">Python · Streamlit · OpenAI API · Google Translate API</p>
+          <p>Engineered a 5-language chatbot using the OpenAI and Google Translate APIs, with secure authentication and persistent chat history for user interactions.</p>
+        </div>
+      </article>
+
+      <!-- Page 7 · Projects II -->
+      <article class="page" data-label="Projects (cont.)">
+        <p class="kicker">Chapter 5, continued</p>
+        <h2>More projects</h2>
+        <div class="project">
+          <h3>Pawcare</h3>
+          <p class="stack">Java · Android Studio · Firebase · Google Maps API · Calendar API</p>
+          <p>Developed a pet care app for grooming, vet appointments, and pet-sitting with scheduling and reminders; integrated Google Maps, Firebase, and Calendar APIs.</p>
+          <a href="https://github.com/sougandhimanu/pawcare" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+        </div>
+        <div class="project">
+          <h3>Online Doctor Appointment Booking System</h3>
+          <p class="stack">Java · JavaFX · MySQL</p>
+          <p>Developed a JavaFX-based booking system using MVC architecture, with authentication, profile management, appointment scheduling, and CRUD functionality backed by MySQL.</p>
+        </div>
+        <div class="project">
+          <h3>E-Learning Platform for Students</h3>
+          <p class="stack">Figma</p>
+          <p>Designed an e-learning platform for remote and on-campus students: six user-focused screens for communication, coursework tracking, and learning management.</p>
+        </div>
+      </article>
+
+      <!-- Page 8 · Publications -->
+      <article class="page" data-label="Publications">
+        <p class="kicker">Chapter 6</p>
+        <h2>Publications</h2>
+        <div class="project">
+          <h3>Improving Software Quality Framework Using AI Platforms</h3>
+          <p class="stack">Peer-reviewed book chapter · Dec 2024 &ndash; Feb 2025</p>
+          <p>Analyzes the integration of AI tools such as Jira and CASE tools within Software Quality Assurance processes. Explores AI-driven defect detection, risk prediction, workflow automation, and Agile/DevOps support.</p>
+          <a href="https://www.igi-global.com/chapter/improving-software-quality-framework-using-artificial-intelligence-platforms/377674" target="_blank" rel="noopener">Read the chapter on IGI Global &rarr;</a>
+        </div>
+        <div class="project">
+          <h3>Satellite Systems-Space Debris: Survey</h3>
+          <a href="https://ijirt.org/article?manuscript=151679" target="_blank" rel="noopener">Read the article on IJIRT &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Page 9 · Certifications (unchanged list) -->
+      <article class="page" data-label="Certifications">
+        <p class="kicker">Chapter 7</p>
+        <h2>Certifications</h2>
+        <ul class="certs">
+          <li>Codecademy Java Certification</li>
+          <li>FreeCodeCamp Responsive Web Design</li>
+          <li>Jira Fundamentals Badge</li>
+          <li>Google UX Design Specialization</li>
+          <li>Front-End Engineer (Codecademy)</li>
+          <li>IBM Fundamentals of Project Management</li>
+          <li>Foundations of Modern Machine Learning (iHub-Data, IIIT Hyderabad)</li>
+        </ul>
+      </article>
+
+      <!-- Page 10 · Contact -->
+      <article class="page" data-label="Contact">
+        <p class="kicker">Chapter 8</p>
+        <h2>Let's talk</h2>
+        <ul class="contact">
+          <li><span>Email</span><button type="button" data-copy="sougandhimanu@gmail.com" data-copy-label="Email">sougandhimanu@gmail.com</button></li>
+          <li><span>Phone</span><button type="button" data-copy="+1 312-532-3340" data-copy-label="Phone">+1 312-532-3340</button></li>
+          <li><span>Location</span><p>Detroit, MI, USA</p></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sougandhi-manonmani-pendyala/" target="_blank" rel="noopener">/in/sougandhi-manonmani-pendyala</a></li>
+          <li><span>GitHub</span><a href="https://github.com/sougandhimanu" target="_blank" rel="noopener">github.com/sougandhimanu</a></li>
+        </ul>
+        <p class="margin-note">Tap the email or phone to copy it.</p>
+      </article>
+
+      <!-- Page 11 · The end -->
+      <article class="page page-end" data-label="The end">
+        <p class="the-end">The end</p>
+        <p>Thanks for reading my book!</p>
+        <button class="ink-btn" type="button" id="backToStart">&larr; Back to the first page</button>
+        <p class="fine">&copy; <span id="year"></span> Sougandhi Manonmani Pendyala</p>
+      </article>
+
+      </div>
     </div>
+
+    <nav class="book-nav" aria-label="Turn pages">
+      <button class="nav-btn" id="prevPage" type="button" aria-label="Previous page">&larr;</button>
+      <span class="nav-label" id="navLabel" aria-live="polite">Profile</span>
+      <button class="nav-btn" id="nextPage" type="button" aria-label="Next page">&rarr;</button>
+    </nav>
   </section>
 
+  <!-- ============ BOX OF CHOCOLATES ============ -->
+  <aside class="choc-box" aria-label="Box of chocolates: my extracurriculars">
+    <div class="box-body">
+      <button class="box-lid" id="boxLid" type="button" aria-expanded="false" aria-controls="chocTray" aria-label="Open the Polymath box of chocolates">
+        <span class="lid-face lid-front">
+          <span class="lid-medal">
+            <span class="lid-label">Polymath</span>
+            <span class="lid-sub">a box of many flavours</span>
+          </span>
+          <span class="lid-hint">click to open</span>
+        </span>
+        <span class="lid-face lid-back"><span class="lid-foil">Polymath</span></span>
+      </button>
+    <div class="choc-tray" id="chocTray" inert>
+      <button class="choc" type="button" data-name="Photography" data-flavour="dark cocoa truffle" aria-label="Chocolate: Photography">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <circle r="20" fill="url(#gDark)"/>
+          <g fill="#8a5c3c" opacity="0.7"><circle cx="-8" cy="-6" r="1.4"/><circle cx="5" cy="-10" r="1.1"/><circle cx="9" cy="4" r="1.3"/><circle cx="-4" cy="8" r="1"/><circle cx="-12" cy="4" r="1.1"/><circle cx="2" cy="1" r="0.9"/><circle cx="12" cy="-4" r="0.9"/></g>
+          <ellipse cx="-7" cy="-9" rx="6" ry="3.5" fill="#fff" opacity="0.12"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Reading" data-flavour="milk chocolate with vanilla drizzle" aria-label="Chocolate: Reading">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <rect x="-19" y="-19" width="38" height="38" rx="6" fill="url(#gMilk)"/>
+          <path d="M-14,-7 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M-14,5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Writing" data-flavour="ruby chocolate heart" aria-label="Chocolate: Writing">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <path d="M0,17 C-24,2 -19,-19 -6.5,-18 C-2.5,-18 0,-14 0,-11.5 C0,-14 2.5,-18 6.5,-18 C19,-19 24,2 0,17 Z" fill="url(#gRuby)"/>
+          <ellipse cx="-8" cy="-9" rx="4.5" ry="2.6" fill="#fff" opacity="0.25"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Chess" data-flavour="dark &amp; white checkerboard" aria-label="Chocolate: Chess">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <rect x="-18" y="-18" width="18" height="18" fill="url(#gDark)"/>
+          <rect x="0" y="-18" width="18" height="18" fill="url(#gWhite)"/>
+          <rect x="-18" y="0" width="18" height="18" fill="url(#gWhite)"/>
+          <rect x="0" y="0" width="18" height="18" fill="url(#gDark)"/>
+          <rect x="-18" y="-18" width="36" height="36" rx="4" fill="none" stroke="#3a2416" stroke-width="2"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Cricket" data-flavour="red-foiled cricket ball" aria-label="Chocolate: Cricket">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <circle r="19" fill="url(#gRed)"/>
+          <path d="M-6,-18 C-13,-6 -13,6 -6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
+          <path d="M6,-18 C13,-6 13,6 6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
+          <ellipse cx="-7" cy="-9" rx="5" ry="3" fill="#fff" opacity="0.2"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Badminton" data-flavour="white chocolate swirl" aria-label="Chocolate: Badminton">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <circle r="19" fill="url(#gWhite)"/>
+          <path d="M-11,2 a11,11 0 1,1 11,11 a7,7 0 1,1 -7,-7 a3.5,3.5 0 1,1 3.5,3.5" stroke="#c9a676" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Neuroscience" data-flavour="strawberry brain truffle" aria-label="Chocolate: Neuroscience">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <ellipse rx="20" ry="17" fill="url(#gPink)"/>
+          <path d="M0,-16 C-2,-8 2,-4 0,4 C-2,10 1,13 0,16" stroke="#8f3f4e" stroke-width="1.6" fill="none"/>
+          <path d="M-15,-6 q4,-5 8,0 t7,0 M-16,4 q4,-5 8,0 t7,0 M2,-8 q4,-5 8,0 t6,0 M3,3 q4,-5 8,0 t6,0 M-10,11 q3,-4 7,0 M4,11 q3,-4 7,0" stroke="#8f3f4e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Innovation" data-flavour="salted caramel star" aria-label="Chocolate: Innovation">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <path d="M0,-21 L5.29,-7.28 L19.97,-6.49 L8.56,2.78 L12.34,16.99 L0,9 L-12.34,16.99 L-8.56,2.78 L-19.97,-6.49 L-5.29,-7.28 Z" fill="url(#gCaramel)" stroke="#8a5216" stroke-width="1.2" stroke-linejoin="round"/>
+          <circle cx="-2" cy="-4" r="3" fill="#fff" opacity="0.3"/>
+        </svg>
+      </button>
+      <button class="choc" type="button" data-name="Cooking" data-flavour="dark hexagon with caramel heart" aria-label="Chocolate: Cooking">
+        <svg viewBox="-30 -30 60 60" aria-hidden="true">
+          <path d="M20,0 L10,17.32 L-10,17.32 L-20,0 L-10,-17.32 L10,-17.32 Z" fill="url(#gDark)"/>
+          <circle r="8" fill="url(#gCaramel)"/>
+          <circle cx="-2.5" cy="-2.5" r="2.2" fill="#fff" opacity="0.35"/>
+        </svg>
+      </button>
+    </div>
+    </div>
+    <div class="choc-reveal" id="chocReveal" aria-live="polite">
+      <span class="reveal-name">The box is closed</span>
+      <span class="reveal-flavour">click the lid to open it</span>
+    </div>
+  </aside>
 </main>
 
-<footer class="sitefoot">
-  <span>&copy; <span id="year"></span> Sougandhi Manonmani Pendyala</span>
-  <a href="#top">Back to top &uarr;</a>
-</footer>
 
 <script src="js/script.js"></script>
 </body>
