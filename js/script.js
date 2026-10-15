@@ -178,6 +178,7 @@
   });
 
   document.addEventListener('keydown', (e) => {
+    if (!document.getElementById('spread').hidden) return;
     if (e.key === 'ArrowRight' || e.key === 'PageDown') go(target + 1);
     if (e.key === 'ArrowLeft' || e.key === 'PageUp') go(target - 1);
   });
@@ -248,44 +249,111 @@
 
   playPhoto();
 
-  /* ---------- Marigold garland across the top ---------- */
-  const toran = document.getElementById('toran');
-  const MARIGOLDS = [['#ff9f1c', '#f77f00'], ['#ffd23f', '#f4a300']];
+  /* ---------- Meadow: grass and flowers swaying in the breeze ---------- */
+  const meadow = document.getElementById('meadow');
+  // Kind of flower, and its two petal shades
+  const FLOWERS = [
+    ['rose', '#e9a1b1', '#d98596'], ['rose', '#f2bcc6', '#e3a0ad'], ['rose', '#e7b3a0', '#d7957f'],
+    ['daisy', '#fbf7ef', '#ece3d3'], ['daisy', '#fbf7ef', '#ece3d3'], ['daisy', '#fbf7ef', '#ece3d3'],
+    ['wild', '#f2d27a', '#e6bd55'], ['wild', '#c9b6e4', '#b39fd6'], ['wild', '#f4c7a6', '#e9ad84'],
+  ];
 
-  const hangToran = () => {
-    toran.innerHTML = '';
-    const step = 22;
-    const swag = 9; // flowers per drooping loop
-    const count = Math.ceil(window.innerWidth / step) + 1;
-    for (let i = 0; i < count; i++) {
-      const droop = Math.sin(((i % swag) / swag) * Math.PI) * 12;
-      const bloom = document.createElement('span');
-      bloom.className = 'bloom';
-      const [m1, m2] = MARIGOLDS[i % 2];
-      bloom.style.cssText = `left:${i * step - 8}px;top:${2 + droop}px;--m1:${m1};--m2:${m2}`;
-      toran.appendChild(bloom);
-      if (i % swag === 0) {
-        // Mango leaves hang where each loop is tied up
-        for (const side of [-1, 1]) {
-          const leaf = document.createElement('span');
-          leaf.className = 'leaf';
-          leaf.style.cssText = `left:${i * step - 7 + side * 6}px;top:15px;transform:rotate(${80 + side * 18}deg)`;
-          toran.appendChild(leaf);
-        }
+  const foreground = document.getElementById('foreground');
+
+  const plantMeadow = () => {
+    meadow.innerHTML = '';
+    foreground.innerHTML = '';
+    const area = window.innerWidth * window.innerHeight;
+    const tufts = Math.round(Math.min(110, Math.max(40, area / 14000)));
+    const flowers = Math.round(tufts * 0.55);
+    const frag = document.createDocumentFragment();
+    const plant = (cls, depth, target = frag, x = Math.random() * 100) => {
+      // depth 0 = near the horizon (small, slow), 1 = foreground (big)
+      const el = document.createElement('span');
+      el.className = cls;
+      const size = 0.45 + depth * 0.75;
+      el.style.setProperty('--x', `${x}%`);
+      el.style.setProperty('--y', `${(1 - depth) * 92}%`);
+      el.style.setProperty('--d', `${2.4 + Math.random() * 2}s`);
+      el.style.setProperty('--dl', `${-Math.random() * 4}s`);
+      el.style.setProperty('--a', `${4 + Math.random() * 5}deg`);
+      el.style.zIndex = String(Math.round(depth * 100));
+      if (cls === 'tuft') {
+        el.style.setProperty('--w', `${Math.round(14 * size)}px`);
+        el.style.setProperty('--h', `${Math.round((18 + Math.random() * 14) * size)}px`);
+      } else {
+        const [kind, c, c2] = FLOWERS[Math.floor(Math.random() * FLOWERS.length)];
+        if (kind !== 'wild') el.classList.add(kind);
+        el.style.setProperty('--c', c);
+        el.style.setProperty('--c2', c2);
+        // Wildflowers near the horizon grow tall, like the background of a meadow
+        const tall = depth < 0.35 ? 1.7 : 1;
+        el.style.setProperty('--h', `${Math.round((26 + Math.random() * 20) * size * tall)}px`);
+        el.style.setProperty('--s', `${Math.round(13 * size + 3)}px`);
       }
+      target.appendChild(el);
+    };
+    for (let i = 0; i < tufts; i++) plant('tuft', Math.random());
+    for (let i = 0; i < flowers; i++) plant('flower', Math.random());
+    meadow.appendChild(frag);
+
+    // A denser, taller row in front, so the breeze is easy to see
+    const front = document.createDocumentFragment();
+    const across = Math.round(window.innerWidth / 26);
+    for (let i = 0; i < across; i++) {
+      const x = (i / across) * 100 + Math.random() * 2;
+      plant('tuft', 1.2 + Math.random() * 0.5, front, x);
+      if (i % 3 === 0) plant('flower', 1.1 + Math.random() * 0.5, front, x + 1);
     }
+    foreground.appendChild(front);
   };
-  hangToran();
-  let toranTimer = null;
+  plantMeadow();
+  let meadowTimer = null;
   window.addEventListener('resize', () => {
-    clearTimeout(toranTimer);
-    toranTimer = setTimeout(hangToran, 150);
+    clearTimeout(meadowTimer);
+    meadowTimer = setTimeout(plantMeadow, 200);
+  });
+
+  /* ---------- Picnic basket: opens to a spread of treats + the chocolate box ---------- */
+  const basket = document.getElementById('basket');
+  const spread = document.getElementById('spread');
+  const spreadClose = document.getElementById('spreadClose');
+  let spreadTimer = null;
+
+  const openSpread = () => {
+    basket.classList.add('open');
+    basket.setAttribute('aria-expanded', 'true');
+    clearTimeout(spreadTimer);
+    spreadTimer = setTimeout(() => {
+      spread.hidden = false;
+      spreadClose.focus();
+    }, reduceMotion ? 0 : 450);
+  };
+
+  const closeSpread = () => {
+    clearTimeout(spreadTimer);
+    spread.hidden = true;
+    basket.classList.remove('open');
+    basket.setAttribute('aria-expanded', 'false');
+    basket.focus();
+  };
+
+  basket.addEventListener('click', () => {
+    if (spread.hidden) openSpread();
+    else closeSpread();
+  });
+  spreadClose.addEventListener('click', closeSpread);
+  spread.addEventListener('click', (e) => {
+    if (e.target === spread) closeSpread(); // click outside the card
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !spread.hidden) closeSpread();
   });
 
   /* ---------- Petals drifting down in the background ---------- */
   if (!reduceMotion) {
     const petals = document.getElementById('petals');
-    const PETAL_COLOURS = ['#ff9f1c', '#ffd23f', '#f77f00', '#ff7eb6', '#e63973'];
+    const PETAL_COLOURS = ['#f2bcc6', '#e9a1b1', '#fbf6ee', '#f4d9a8', '#e7b3a0'];
     for (let i = 0; i < 16; i++) {
       const petal = document.createElement('span');
       petal.className = 'petal';

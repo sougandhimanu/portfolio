@@ -26,41 +26,31 @@
   </defs>
 </svg>
 
-<!-- ============ THE STUDY TABLE ============ -->
-<div class="toran" id="toran" aria-hidden="true"></div>
+<!-- ============ THE GARDEN ============ -->
+<div class="garden" aria-hidden="true">
+  <div class="sun"></div>
+  <div class="hills"></div>
+  <div class="meadow" id="meadow"></div>
+</div>
 <div class="petals" id="petals" aria-hidden="true"></div>
 
-<main class="desk">
-  <div class="diya" aria-hidden="true"><span class="flame"></span></div>
-  <div class="desk-decor" aria-hidden="true">
-    <div class="pencil"></div>
-    <div class="coffee"></div>
-  </div>
+<main class="desk picnic">
+  <div class="blanket" aria-hidden="true"></div>
 
-  <aside class="now-note" aria-label="What I'm working on now">
-    <span class="pin" aria-hidden="true"></span>
-    <p class="now-title">Currently working on&hellip;</p>
-    <ul>
-      <li>AI safety</li>
-      <li>AI reliability</li>
-      <li>Responsible AI</li>
-    </ul>
-  </aside>
 
-  <p class="sticky-note"><span class="hint-mouse">Click a page to turn it&nbsp;&rarr;</span><span class="hint-touch">Swipe to turn the pages&nbsp;&rarr;</span><br>and try a chocolate!</p>
 
   <section class="book-area" aria-label="Portfolio book">
     <div class="book-wrap">
       <div class="bookmarks" id="tabs" aria-label="Jump to a chapter">
-        <button type="button" data-page="0" style="--c:#d6202f">Profile</button>
-        <button type="button" data-page="1" style="--c:#f28c28">About</button>
-        <button type="button" data-page="2" style="--c:#e0a800">Experience</button>
-        <button type="button" data-page="4" style="--c:#2e9e5b">Education</button>
-        <button type="button" data-page="5" style="--c:#0f8b8d">Skills</button>
-        <button type="button" data-page="6" style="--c:#1f6fd1">Projects</button>
-        <button type="button" data-page="8" style="--c:#7b2fbe">Publications</button>
-        <button type="button" data-page="9" style="--c:#d6336c">Certifications</button>
-        <button type="button" data-page="10" style="--c:#8a4b2a">Contact</button>
+        <button type="button" data-page="0" style="--c:#c4737f">Profile</button>
+        <button type="button" data-page="1" style="--c:#c9825a">About</button>
+        <button type="button" data-page="2" style="--c:#bf9a48">Experience</button>
+        <button type="button" data-page="4" style="--c:#869a5f">Education</button>
+        <button type="button" data-page="5" style="--c:#6f9488">Skills</button>
+        <button type="button" data-page="6" style="--c:#7b93ad">Projects</button>
+        <button type="button" data-page="8" style="--c:#9583ad">Publications</button>
+        <button type="button" data-page="9" style="--c:#b07493">Certifications</button>
+        <button type="button" data-page="10" style="--c:#8c6b55">Contact</button>
       </div>
       <div class="book" id="book">
 
@@ -161,7 +151,7 @@
           distributed systems, and cloud-native services using Java, Spring Boot, React, TypeScript, and AWS.</p>
         <p>Skilled in event-driven architectures, REST APIs, automated testing, and operational monitoring &mdash;
           with a strong foundation in software engineering, distributed systems, data structures, and algorithms.</p>
-        <p class="margin-note">Turn the page to read on &mdash; and the box of chocolates on the desk holds everything I do off the clock.</p>
+        <p class="margin-note">Turn the page to read on &mdash; and my picnic basket holds everything I do off the clock.</p>
       </article>
 
       <!-- Page 2 · Experience I -->
@@ -326,92 +316,284 @@
     </nav>
   </section>
 
-  <!-- ============ BOX OF CHOCOLATES ============ -->
-  <aside class="choc-box" aria-label="Box of chocolates: my extracurriculars">
-    <div class="box-body">
-      <button class="box-lid" id="boxLid" type="button" aria-expanded="false" aria-controls="chocTray" aria-label="Open the Polymath box of chocolates">
-        <span class="lid-face lid-front">
-          <span class="lid-medal">
-            <span class="lid-label">Polymath</span>
-            <span class="lid-sub">a box of many flavours</span>
-          </span>
-          <span class="lid-hint">click to open</span>
-        </span>
-        <span class="lid-face lid-back"><span class="lid-foil">Polymath</span></span>
-      </button>
-    <div class="choc-tray" id="chocTray" inert>
-      <button class="choc" type="button" data-name="Photography" data-flavour="dark cocoa truffle" aria-label="Chocolate: Photography">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <circle r="20" fill="url(#gDark)"/>
-          <g fill="#8a5c3c" opacity="0.7"><circle cx="-8" cy="-6" r="1.4"/><circle cx="5" cy="-10" r="1.1"/><circle cx="9" cy="4" r="1.3"/><circle cx="-4" cy="8" r="1"/><circle cx="-12" cy="4" r="1.1"/><circle cx="2" cy="1" r="0.9"/><circle cx="12" cy="-4" r="0.9"/></g>
-          <ellipse cx="-7" cy="-9" rx="6" ry="3.5" fill="#fff" opacity="0.12"/>
+  <!-- ============ PICNIC CORNER ============ -->
+  <aside class="picnic-corner" aria-label="Picnic">
+  <aside class="now-note" aria-label="What I'm working on now">
+    <span class="pin" aria-hidden="true"></span>
+    <p class="now-title">Currently working on&hellip;</p>
+    <ul>
+      <li>AI safety</li>
+      <li>AI reliability</li>
+      <li>Responsible AI</li>
+    </ul>
+  </aside>
+      <button class="basket" id="basket" type="button" aria-expanded="false" aria-controls="spread" aria-label="Open the picnic basket">
+        <svg viewBox="0 0 200 160" aria-hidden="true">
+          <defs>
+            <pattern id="weave" width="12" height="10" patternUnits="userSpaceOnUse">
+              <rect width="12" height="10" fill="#b9793b"/>
+              <rect x="0" y="0" width="6" height="5" fill="#d29a55"/>
+              <rect x="6" y="5" width="6" height="5" fill="#d29a55"/>
+              <path d="M0 5h12M6 0v10" stroke="#8a5424" stroke-width="0.8"/>
+            </pattern>
+          </defs>
+          <ellipse cx="100" cy="153" rx="76" ry="7" fill="rgba(60,30,20,0.22)"/>
+          <path d="M52,66 C52,8 148,8 148,66" fill="none" stroke="#8a5424" stroke-width="9" stroke-linecap="round"/>
+          <path d="M52,66 C52,8 148,8 148,66" fill="none" stroke="#d29a55" stroke-width="4" stroke-linecap="round"/>
+          <g class="peek">
+            <path d="M60,66 l10,-30 l8,30 Z" fill="#e8b25a"/>
+            <circle cx="120" cy="56" r="9" fill="#f59f00"/>
+            <path d="M120,47 q5,-6 10,-3" stroke="#2e9e5b" stroke-width="3" fill="none"/>
+            <circle cx="96" cy="58" r="7" fill="#d6336c"/>
+          </g>
+          <path d="M26,68 L174,68 L161,148 Q100,156 39,148 Z" fill="url(#weave)" stroke="#8a5424" stroke-width="2.5" stroke-linejoin="round"/>
+          <path d="M60,74 L140,74 L136,106 L64,106 Z" fill="#fff" opacity="0.9"/>
+          <path d="M60,74 L140,74 L136,106 L64,106 Z" fill="url(#gingham)"/>
+          <g class="lid lid-l"><rect x="22" y="58" width="80" height="13" rx="4" fill="#a8692f" stroke="#8a5424" stroke-width="2"/></g>
+          <g class="lid lid-r"><rect x="98" y="58" width="80" height="13" rx="4" fill="#a8692f" stroke="#8a5424" stroke-width="2"/></g>
+          <defs>
+            <pattern id="gingham" width="10" height="10" patternUnits="userSpaceOnUse">
+              <rect width="5" height="10" fill="rgba(214,51,108,0.45)"/>
+              <rect width="10" height="5" fill="rgba(214,51,108,0.45)"/>
+            </pattern>
+          </defs>
         </svg>
+        <span class="basket-hint">click the basket</span>
       </button>
-      <button class="choc" type="button" data-name="Reading" data-flavour="milk chocolate with vanilla drizzle" aria-label="Chocolate: Reading">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <rect x="-19" y="-19" width="38" height="38" rx="6" fill="url(#gMilk)"/>
-          <path d="M-14,-7 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M-14,5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Writing" data-flavour="ruby chocolate heart" aria-label="Chocolate: Writing">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <path d="M0,17 C-24,2 -19,-19 -6.5,-18 C-2.5,-18 0,-14 0,-11.5 C0,-14 2.5,-18 6.5,-18 C19,-19 24,2 0,17 Z" fill="url(#gRuby)"/>
-          <ellipse cx="-8" cy="-9" rx="4.5" ry="2.6" fill="#fff" opacity="0.25"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Chess" data-flavour="dark &amp; white checkerboard" aria-label="Chocolate: Chess">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <rect x="-18" y="-18" width="18" height="18" fill="url(#gDark)"/>
-          <rect x="0" y="-18" width="18" height="18" fill="url(#gWhite)"/>
-          <rect x="-18" y="0" width="18" height="18" fill="url(#gWhite)"/>
-          <rect x="0" y="0" width="18" height="18" fill="url(#gDark)"/>
-          <rect x="-18" y="-18" width="36" height="36" rx="4" fill="none" stroke="#3a2416" stroke-width="2"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Cricket" data-flavour="red-foiled cricket ball" aria-label="Chocolate: Cricket">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <circle r="19" fill="url(#gRed)"/>
-          <path d="M-6,-18 C-13,-6 -13,6 -6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
-          <path d="M6,-18 C13,-6 13,6 6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
-          <ellipse cx="-7" cy="-9" rx="5" ry="3" fill="#fff" opacity="0.2"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Badminton" data-flavour="white chocolate swirl" aria-label="Chocolate: Badminton">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <circle r="19" fill="url(#gWhite)"/>
-          <path d="M-11,2 a11,11 0 1,1 11,11 a7,7 0 1,1 -7,-7 a3.5,3.5 0 1,1 3.5,3.5" stroke="#c9a676" stroke-width="2" fill="none" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Neuroscience" data-flavour="strawberry brain truffle" aria-label="Chocolate: Neuroscience">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <ellipse rx="20" ry="17" fill="url(#gPink)"/>
-          <path d="M0,-16 C-2,-8 2,-4 0,4 C-2,10 1,13 0,16" stroke="#8f3f4e" stroke-width="1.6" fill="none"/>
-          <path d="M-15,-6 q4,-5 8,0 t7,0 M-16,4 q4,-5 8,0 t7,0 M2,-8 q4,-5 8,0 t6,0 M3,3 q4,-5 8,0 t6,0 M-10,11 q3,-4 7,0 M4,11 q3,-4 7,0" stroke="#8f3f4e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Innovation" data-flavour="salted caramel star" aria-label="Chocolate: Innovation">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <path d="M0,-21 L5.29,-7.28 L19.97,-6.49 L8.56,2.78 L12.34,16.99 L0,9 L-12.34,16.99 L-8.56,2.78 L-19.97,-6.49 L-5.29,-7.28 Z" fill="url(#gCaramel)" stroke="#8a5216" stroke-width="1.2" stroke-linejoin="round"/>
-          <circle cx="-2" cy="-4" r="3" fill="#fff" opacity="0.3"/>
-        </svg>
-      </button>
-      <button class="choc" type="button" data-name="Cooking" data-flavour="dark hexagon with caramel heart" aria-label="Chocolate: Cooking">
-        <svg viewBox="-30 -30 60 60" aria-hidden="true">
-          <path d="M20,0 L10,17.32 L-10,17.32 L-20,0 L-10,-17.32 L10,-17.32 Z" fill="url(#gDark)"/>
-          <circle r="8" fill="url(#gCaramel)"/>
-          <circle cx="-2.5" cy="-2.5" r="2.2" fill="#fff" opacity="0.35"/>
-        </svg>
-      </button>
-    </div>
-    </div>
-    <div class="choc-reveal" id="chocReveal" aria-live="polite">
-      <span class="reveal-name">The box is closed</span>
-      <span class="reveal-flavour">click the lid to open it</span>
-    </div>
+      <svg class="lounger" viewBox="0 0 320 198" role="img" aria-label="Anime-style Sougandhi lying on the picnic blanket with a camera and daisies, swinging her feet">
+        <defs>
+          <radialGradient id="iris3" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#b0703f"/><stop offset="0.6" stop-color="#5a2f1b"/><stop offset="1" stop-color="#2a140b"/></radialGradient>
+          <pattern id="floral" width="14" height="14" patternUnits="userSpaceOnUse">
+            <rect width="14" height="14" fill="#f6ecdf"/>
+            <g fill="#d98596"><circle cx="3" cy="3" r="1.3"/><circle cx="10" cy="10" r="1.3"/></g>
+            <g fill="#e9b7a3"><circle cx="10" cy="3.5" r="0.9"/><circle cx="3.5" cy="10" r="0.9"/></g>
+            <g fill="#8fa36b"><circle cx="4.6" cy="2.2" r="0.6"/><circle cx="11.6" cy="9.2" r="0.6"/></g>
+          </pattern>
+        </defs>
+        <ellipse cx="180" cy="170" rx="140" ry="11" fill="rgba(90,60,30,0.14)"/>
+        <!-- legs swinging behind -->
+        <g class="leg leg-b">
+          <path d="M292,152 L268,88" stroke="#c98a5e" stroke-width="12" stroke-linecap="round"/>
+          <path d="M262,92 q7,4 13,0" stroke="#e8c26a" stroke-width="2" fill="none"/>
+          <g transform="translate(266 76) rotate(-20)"><rect x="-8" y="-13" width="16" height="25" rx="7" fill="#fbfaf6" stroke="#d9d1c3" stroke-width="1.5"/><path d="M-8,6 h16" stroke="#d9d1c3" stroke-width="2"/><path d="M-4,-6 h8 M-4,-2 h8" stroke="#e3dccf" stroke-width="1.2"/></g>
+        </g>
+        <g class="leg leg-f">
+          <path d="M280,152 L292,90" stroke="#d9a072" stroke-width="12" stroke-linecap="round"/>
+          <path d="M286,96 q7,4 13,0" stroke="#e8c26a" stroke-width="2" fill="none"/>
+          <g transform="translate(294 79) rotate(12)"><rect x="-8" y="-13" width="16" height="25" rx="7" fill="#ffffff" stroke="#d9d1c3" stroke-width="1.5"/><path d="M-8,6 h16" stroke="#d9d1c3" stroke-width="2"/><path d="M-4,-6 h8 M-4,-2 h8" stroke="#e3dccf" stroke-width="1.2"/></g>
+        </g>
+        <!-- salwar and kurta, lying on her tummy -->
+        <path d="M205,140 C215,122 262,122 292,132 C307,139 306,162 291,166 L216,166 C200,164 198,150 205,140 Z" fill="url(#floral)"/>
+        <path d="M98,128 C110,108 152,110 202,122 C230,128 238,150 230,166 L112,166 C95,160 91,142 98,128 Z" fill="url(#floral)"/>
+        <path d="M98,128 C110,108 152,110 202,122 C230,128 238,150 230,166 L112,166 C95,160 91,142 98,128 Z" fill="none" stroke="#e3cdb6" stroke-width="1.2"/>
+        <path d="M128,114 C160,108 196,118 216,132 C232,146 246,158 262,166" stroke="#d8899a" stroke-width="11" fill="none" stroke-linecap="round" opacity="0.9"/>
+        <path d="M130,112 C160,106 196,116 214,130" stroke="#f3dfb8" stroke-width="1.4" fill="none" stroke-dasharray="3 3"/>
+        <!-- neck and long hair falling over her shoulders -->
+        <rect x="88" y="94" width="15" height="26" rx="6" fill="#c98a5e"/>
+        <path d="M63,72 C59,43 77,25 96,25 C116,25 132,42 128,74 C131,96 134,118 126,134 L70,134 C60,118 61,96 63,72 Z" fill="#24120d"/>
+        <path d="M118,110 C132,118 146,122 160,120" stroke="#24120d" stroke-width="10" fill="none" stroke-linecap="round"/>
+        <!-- face (same character as the portrait) -->
+        <g transform="translate(18.5 0.75) scale(0.75)">
+          <path d="M70,90 C70,62 86,54 102,54 C118,54 134,62 134,90 C134,114 121,133 102,138 C83,133 70,114 70,90 Z" fill="#d9a072"/>
+          <g fill="#f2b33d">
+            <circle cx="71" cy="111" r="2"/><path d="M66,119 q5,-8 10,0 Z"/><circle cx="67" cy="122" r="1.2"/><circle cx="71" cy="123" r="1.2"/><circle cx="75" cy="122" r="1.2"/>
+            <circle cx="133" cy="111" r="2"/><path d="M128,119 q5,-8 10,0 Z"/><circle cx="129" cy="122" r="1.2"/><circle cx="133" cy="123" r="1.2"/><circle cx="137" cy="122" r="1.2"/>
+          </g>
+          <path d="M68,92 C64,60 84,46 104,47 C126,48 142,62 136,94 C132,80 126,72 116,68 C118,76 114,82 110,84 C108,76 102,70 94,70 C92,78 84,84 76,86 C76,80 72,86 68,92 Z" fill="#24120d"/>
+          <g fill="#fffaf0"><circle cx="128" cy="62" r="3.2"/><circle cx="134" cy="68" r="3"/><circle cx="131" cy="56" r="2.6"/></g>
+          <path d="M84,58 q12,-6 26,-2" stroke="#7a4434" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85"/>
+          <path d="M82,86 q7,-4 14,-1" stroke="#24120d" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M108,85 q7,-3 14,1" stroke="#24120d" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="102" cy="88" r="2.3" fill="#d6202f"/>
+          <g class="eyes">
+            <ellipse cx="89" cy="100" rx="7.5" ry="9" fill="#fff"/>
+            <ellipse cx="89.5" cy="101" rx="6" ry="7.8" fill="url(#iris3)"/>
+            <circle cx="89.5" cy="102" r="2.6" fill="#1a0b06"/>
+            <circle cx="87" cy="97.5" r="2.4" fill="#fff"/>
+            <circle cx="92" cy="105" r="1.1" fill="#fff"/>
+            <ellipse cx="115" cy="100" rx="7.5" ry="9" fill="#fff"/>
+            <ellipse cx="114.5" cy="101" rx="6" ry="7.8" fill="url(#iris3)"/>
+            <circle cx="114.5" cy="102" r="2.6" fill="#1a0b06"/>
+            <circle cx="112" cy="97.5" r="2.4" fill="#fff"/>
+            <circle cx="117" cy="105" r="1.1" fill="#fff"/>
+            <path d="M80,94 Q89,88 98,93 l2,-2" stroke="#1a0b06" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <path d="M124,94 Q115,88 106,93 l-2,-2" stroke="#1a0b06" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+          </g>
+          <g fill="none" stroke="#5a3a2a" stroke-width="1.4" opacity="0.85">
+            <circle cx="89" cy="100" r="11.5"/><circle cx="115" cy="100" r="11.5"/><path d="M100.5,99 q1.5,-1.5 3,0"/>
+          </g>
+          <ellipse cx="79" cy="115" rx="6" ry="3" fill="#ff7f8e" opacity="0.5"/>
+          <ellipse cx="125" cy="115" rx="6" ry="3" fill="#ff7f8e" opacity="0.5"/>
+          <path d="M102,108 l-1.5,3" stroke="#b5764d" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M95,118 q7,8 14,0 q-7,3 -14,0 Z" fill="#b8434a"/>
+        </g>
+        <!-- arms: elbows on the blanket, chin in her hands -->
+        <path d="M86,124 L64,156" stroke="#f1e4d3" stroke-width="14" stroke-linecap="round"/>
+        <path d="M112,124 L130,156" stroke="#f1e4d3" stroke-width="14" stroke-linecap="round"/>
+        <path d="M64,156 L82,110" stroke="#d9a072" stroke-width="11" stroke-linecap="round"/>
+        <path d="M130,156 L112,110" stroke="#d9a072" stroke-width="11" stroke-linecap="round"/>
+        <path d="M70,140 l8,3 M72,135 l8,3 M124,140 l-8,3 M122,135 l-8,3" stroke="#f2b33d" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="84" cy="105" r="7.5" fill="#d9a072"/>
+        <circle cx="110" cy="105" r="7.5" fill="#d9a072"/>
+        <!-- vintage camera and a daisy bouquet on the blanket -->
+        <g transform="translate(146 168)">
+          <rect x="0" y="4" width="46" height="24" rx="4" fill="#2b2b2d"/>
+          <rect x="0" y="4" width="46" height="7" rx="3" fill="#c9c4bb"/>
+          <rect x="6" y="0" width="10" height="6" rx="1.5" fill="#3a3a3d"/>
+          <circle cx="25" cy="18" r="9" fill="#1b1b1d" stroke="#8d8a85" stroke-width="2"/>
+          <circle cx="25" cy="18" r="4.5" fill="#3d4a5a"/>
+          <circle cx="23" cy="16" r="1.5" fill="#cfd8e3" opacity="0.8"/>
+          <circle cx="40" cy="9" r="2" fill="#e0dbd2"/>
+        </g>
+        <g transform="translate(206 176)">
+          <path d="M0,10 L58,4 M2,13 L58,9 M4,16 L56,14" stroke="#7f9a55" stroke-width="1.6" stroke-linecap="round"/>
+          <g fill="#fbf7ef" stroke="#e7ddcc" stroke-width="0.6">
+            <circle cx="56" cy="2" r="4.5"/><circle cx="64" cy="8" r="4"/><circle cx="58" cy="13" r="4.5"/><circle cx="68" cy="1" r="3.5"/>
+          </g>
+          <g fill="#f2c94c"><circle cx="56" cy="2" r="1.6"/><circle cx="64" cy="8" r="1.4"/><circle cx="58" cy="13" r="1.6"/><circle cx="68" cy="1" r="1.2"/></g>
+          <path d="M-2,8 q-4,4 2,8" stroke="#d8899a" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
   </aside>
 </main>
 
+
+<div class="foreground" id="foreground" aria-hidden="true"></div>
+<div class="dof dof-l" aria-hidden="true"><span></span><span></span><span></span><i></i><i></i></div>
+<div class="dof dof-r" aria-hidden="true"><span></span><span></span><span></span><i></i><i></i></div>
+<div class="film" aria-hidden="true"></div>
+
+<!-- ============ PICNIC SPREAD (opens from the basket) ============ -->
+<div class="spread" id="spread" hidden>
+  <div class="spread-card" role="dialog" aria-modal="true" aria-labelledby="spreadTitle">
+    <button class="spread-close" id="spreadClose" type="button">Pack it up &times;</button>
+    <p class="spread-title" id="spreadTitle">Out of the basket&hellip;</p>
+    <div class="spread-body">
+        <ul class="treats">
+          <li>
+            <svg viewBox="0 0 80 70" aria-hidden="true">
+              <g class="steam-lines" fill="none" stroke="#b9a99a" stroke-width="2" stroke-linecap="round"><path d="M26,22 q-4,-6 0,-12"/><path d="M52,22 q-4,-6 0,-12"/></g>
+              <path d="M14,28 L38,28 L34,58 L18,58 Z" fill="#b5562b"/><ellipse cx="26" cy="28" rx="12" ry="3.5" fill="#c58b4e"/>
+              <path d="M40,30 L64,30 L60,60 L44,60 Z" fill="#a24a24"/><ellipse cx="52" cy="30" rx="12" ry="3.5" fill="#c58b4e"/>
+            </svg>
+            <span>Masala chai</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 80 70" aria-hidden="true">
+              <path d="M18,40 C14,24 32,14 42,26 C52,38 44,58 30,58 C22,58 20,50 18,40 Z" fill="#f59f00"/>
+              <path d="M40,44 C38,28 56,20 64,32 C72,46 62,62 50,60 C44,59 41,52 40,44 Z" fill="#ffb300"/>
+              <path d="M34,24 q4,-12 14,-12" stroke="#2e9e5b" stroke-width="3" fill="none"/>
+              <path d="M44,14 q10,-4 14,4 q-10,2 -14,-4 Z" fill="#3fa34d"/>
+              <ellipse cx="26" cy="34" rx="4" ry="6" fill="#fff" opacity="0.3"/>
+            </svg>
+            <span>Mangoes</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 80 70" aria-hidden="true">
+              <ellipse cx="40" cy="56" rx="34" ry="9" fill="#3fa34d"/>
+              <path d="M14,54 L28,24 L42,54 Z" fill="#e3a43c" stroke="#b9772a" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M36,54 L52,22 L66,54 Z" fill="#eab04a" stroke="#b9772a" stroke-width="1.5" stroke-linejoin="round"/>
+              <g fill="#c9822f"><circle cx="26" cy="44" r="1"/><circle cx="31" cy="48" r="1"/><circle cx="50" cy="42" r="1"/><circle cx="55" cy="47" r="1"/></g>
+            </svg>
+            <span>Samosas</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 80 70" aria-hidden="true">
+              <path d="M10,56 L40,18 L70,56 Z" fill="#f3d39b" stroke="#c99a52" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M16,50 L64,50" stroke="#3fa34d" stroke-width="4" stroke-linecap="round"/>
+              <path d="M20,45 L60,45" stroke="#e5383b" stroke-width="3" stroke-linecap="round"/>
+              <path d="M24,40 L56,40" stroke="#ffd166" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span>Sandwiches</span>
+          </li>
+        </ul>
+      <!-- Box of chocolates -->
+      <aside class="choc-box" aria-label="Box of chocolates: my extracurriculars">
+        <div class="box-body">
+          <button class="box-lid" id="boxLid" type="button" aria-expanded="false" aria-controls="chocTray" aria-label="Open the Polymath box of chocolates">
+            <span class="lid-face lid-front">
+              <span class="lid-medal">
+                <span class="lid-label">Polymath</span>
+                <span class="lid-sub">a box of many flavours</span>
+              </span>
+              <span class="lid-hint">click to open</span>
+            </span>
+            <span class="lid-face lid-back"><span class="lid-foil">Polymath</span></span>
+          </button>
+        <div class="choc-tray" id="chocTray" inert>
+          <button class="choc" type="button" data-name="Photography" data-flavour="dark cocoa truffle" aria-label="Chocolate: Photography">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <circle r="20" fill="url(#gDark)"/>
+              <g fill="#8a5c3c" opacity="0.7"><circle cx="-8" cy="-6" r="1.4"/><circle cx="5" cy="-10" r="1.1"/><circle cx="9" cy="4" r="1.3"/><circle cx="-4" cy="8" r="1"/><circle cx="-12" cy="4" r="1.1"/><circle cx="2" cy="1" r="0.9"/><circle cx="12" cy="-4" r="0.9"/></g>
+              <ellipse cx="-7" cy="-9" rx="6" ry="3.5" fill="#fff" opacity="0.12"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Reading" data-flavour="milk chocolate with vanilla drizzle" aria-label="Chocolate: Reading">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <rect x="-19" y="-19" width="38" height="38" rx="6" fill="url(#gMilk)"/>
+              <path d="M-14,-7 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M-14,5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5 l4.7,5 l4.7,-5" stroke="#f6ead2" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Writing" data-flavour="ruby chocolate heart" aria-label="Chocolate: Writing">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <path d="M0,17 C-24,2 -19,-19 -6.5,-18 C-2.5,-18 0,-14 0,-11.5 C0,-14 2.5,-18 6.5,-18 C19,-19 24,2 0,17 Z" fill="url(#gRuby)"/>
+              <ellipse cx="-8" cy="-9" rx="4.5" ry="2.6" fill="#fff" opacity="0.25"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Chess" data-flavour="dark &amp; white checkerboard" aria-label="Chocolate: Chess">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <rect x="-18" y="-18" width="18" height="18" fill="url(#gDark)"/>
+              <rect x="0" y="-18" width="18" height="18" fill="url(#gWhite)"/>
+              <rect x="-18" y="0" width="18" height="18" fill="url(#gWhite)"/>
+              <rect x="0" y="0" width="18" height="18" fill="url(#gDark)"/>
+              <rect x="-18" y="-18" width="36" height="36" rx="4" fill="none" stroke="#3a2416" stroke-width="2"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Cricket" data-flavour="red-foiled cricket ball" aria-label="Chocolate: Cricket">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <circle r="19" fill="url(#gRed)"/>
+              <path d="M-6,-18 C-13,-6 -13,6 -6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
+              <path d="M6,-18 C13,-6 13,6 6,18" stroke="#f6e7c4" stroke-width="1.5" stroke-dasharray="2.2 2.2" fill="none"/>
+              <ellipse cx="-7" cy="-9" rx="5" ry="3" fill="#fff" opacity="0.2"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Badminton" data-flavour="white chocolate swirl" aria-label="Chocolate: Badminton">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <circle r="19" fill="url(#gWhite)"/>
+              <path d="M-11,2 a11,11 0 1,1 11,11 a7,7 0 1,1 -7,-7 a3.5,3.5 0 1,1 3.5,3.5" stroke="#c9a676" stroke-width="2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Neuroscience" data-flavour="strawberry brain truffle" aria-label="Chocolate: Neuroscience">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <ellipse rx="20" ry="17" fill="url(#gPink)"/>
+              <path d="M0,-16 C-2,-8 2,-4 0,4 C-2,10 1,13 0,16" stroke="#8f3f4e" stroke-width="1.6" fill="none"/>
+              <path d="M-15,-6 q4,-5 8,0 t7,0 M-16,4 q4,-5 8,0 t7,0 M2,-8 q4,-5 8,0 t6,0 M3,3 q4,-5 8,0 t6,0 M-10,11 q3,-4 7,0 M4,11 q3,-4 7,0" stroke="#8f3f4e" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Innovation" data-flavour="salted caramel star" aria-label="Chocolate: Innovation">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <path d="M0,-21 L5.29,-7.28 L19.97,-6.49 L8.56,2.78 L12.34,16.99 L0,9 L-12.34,16.99 L-8.56,2.78 L-19.97,-6.49 L-5.29,-7.28 Z" fill="url(#gCaramel)" stroke="#8a5216" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="-2" cy="-4" r="3" fill="#fff" opacity="0.3"/>
+            </svg>
+          </button>
+          <button class="choc" type="button" data-name="Cooking" data-flavour="dark hexagon with caramel heart" aria-label="Chocolate: Cooking">
+            <svg viewBox="-30 -30 60 60" aria-hidden="true">
+              <path d="M20,0 L10,17.32 L-10,17.32 L-20,0 L-10,-17.32 L10,-17.32 Z" fill="url(#gDark)"/>
+              <circle r="8" fill="url(#gCaramel)"/>
+              <circle cx="-2.5" cy="-2.5" r="2.2" fill="#fff" opacity="0.35"/>
+            </svg>
+          </button>
+        </div>
+        </div>
+        <div class="choc-reveal" id="chocReveal" aria-live="polite">
+          <span class="reveal-name">The box is closed</span>
+          <span class="reveal-flavour">click the lid to open it</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
 
 <script src="js/script.js"></script>
 </body>
