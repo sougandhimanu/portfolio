@@ -8,7 +8,7 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Kalam:wght@400;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,7 +27,11 @@
 </svg>
 
 <!-- ============ THE STUDY TABLE ============ -->
+<div class="toran" id="toran" aria-hidden="true"></div>
+<div class="petals" id="petals" aria-hidden="true"></div>
+
 <main class="desk">
+  <div class="diya" aria-hidden="true"><span class="flame"></span></div>
   <div class="desk-decor" aria-hidden="true">
     <div class="pencil"></div>
     <div class="coffee"></div>
@@ -43,20 +47,20 @@
     </ul>
   </aside>
 
-  <p class="sticky-note"><span class="hint-mouse">Click a page to turn it &rarr;</span><span class="hint-touch">Swipe to turn the pages &rarr;</span><br>and try a chocolate!</p>
+  <p class="sticky-note"><span class="hint-mouse">Click a page to turn it&nbsp;&rarr;</span><span class="hint-touch">Swipe to turn the pages&nbsp;&rarr;</span><br>and try a chocolate!</p>
 
   <section class="book-area" aria-label="Portfolio book">
     <div class="book-wrap">
       <div class="bookmarks" id="tabs" aria-label="Jump to a chapter">
-        <button type="button" data-page="0" style="--c:#c0392b">Profile</button>
-        <button type="button" data-page="1" style="--c:#e67e22">About</button>
-        <button type="button" data-page="2" style="--c:#d4a017">Experience</button>
-        <button type="button" data-page="4" style="--c:#27ae60">Education</button>
-        <button type="button" data-page="5" style="--c:#16a085">Skills</button>
-        <button type="button" data-page="6" style="--c:#2980b9">Projects</button>
-        <button type="button" data-page="8" style="--c:#8e44ad">Publications</button>
-        <button type="button" data-page="9" style="--c:#d35480">Certifications</button>
-        <button type="button" data-page="10" style="--c:#6d4c41">Contact</button>
+        <button type="button" data-page="0" style="--c:#d6202f">Profile</button>
+        <button type="button" data-page="1" style="--c:#f28c28">About</button>
+        <button type="button" data-page="2" style="--c:#e0a800">Experience</button>
+        <button type="button" data-page="4" style="--c:#2e9e5b">Education</button>
+        <button type="button" data-page="5" style="--c:#0f8b8d">Skills</button>
+        <button type="button" data-page="6" style="--c:#1f6fd1">Projects</button>
+        <button type="button" data-page="8" style="--c:#7b2fbe">Publications</button>
+        <button type="button" data-page="9" style="--c:#d6336c">Certifications</button>
+        <button type="button" data-page="10" style="--c:#8a4b2a">Contact</button>
       </div>
       <div class="book" id="book">
 
@@ -64,47 +68,73 @@
       <article class="page page-profile" data-label="Profile">
         <figure class="polaroid" id="polaroid" title="Click me!">
           <div class="polaroid-photo">
-            <svg class="girl" viewBox="0 0 200 200" role="img" aria-label="Illustration of Sougandhi waving">
+            <svg class="girl" viewBox="0 0 200 200" role="img" aria-label="Anime-style illustration of Sougandhi waving">
               <defs>
-                <linearGradient id="girlBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe1cf"/><stop offset="1" stop-color="#f7b9a6"/></linearGradient>
+                <linearGradient id="girlBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd9e6"/><stop offset="1" stop-color="#ffc49b"/></linearGradient>
+                <radialGradient id="iris" cx="50%" cy="35%" r="70%"><stop offset="0" stop-color="#b0703f"/><stop offset="0.6" stop-color="#5a2f1b"/><stop offset="1" stop-color="#2a140b"/></radialGradient>
               </defs>
               <rect width="200" height="200" fill="url(#girlBg)"/>
-              <circle cx="36" cy="40" r="14" fill="#fff" opacity="0.35"/>
-              <circle cx="168" cy="30" r="9" fill="#fff" opacity="0.3"/>
-              <circle cx="172" cy="74" r="5" fill="#fff" opacity="0.35"/>
-              <path d="M56,96 C50,52 76,28 102,28 C130,28 152,50 148,96 C152,126 154,154 142,176 L62,176 C50,154 52,126 56,96 Z" fill="#2a1712"/>
-              <path d="M38,200 C40,168 70,150 102,150 C134,150 162,168 164,200 Z" fill="#2f7a7d"/>
-              <path d="M86,152 L102,170 L118,152" fill="none" stroke="#f2b33d" stroke-width="3" stroke-linejoin="round"/>
-              <rect x="92" y="128" width="20" height="26" rx="8" fill="#b97a54"/>
-              <circle cx="68" cy="102" r="6.5" fill="#c98c63"/>
-              <circle cx="136" cy="102" r="6.5" fill="#c98c63"/>
-              <circle cx="68" cy="113" r="3" fill="#f2b33d"/>
-              <circle cx="136" cy="113" r="3" fill="#f2b33d"/>
-              <ellipse cx="102" cy="98" rx="34" ry="40" fill="#c98c63"/>
-              <path d="M67,94 C64,62 84,52 104,53 C124,54 140,66 138,92 C128,74 114,68 98,70 C86,72 74,80 67,94 Z" fill="#2a1712"/>
-              <path d="M83,86 q8,-5 15,0" stroke="#2a1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
-              <path d="M107,86 q8,-5 15,0" stroke="#2a1712" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <g fill="none" stroke="#f2b33d" stroke-width="1.2" opacity="0.6">
+                <circle cx="102" cy="92" r="62"/>
+                <circle cx="102" cy="92" r="70" stroke-dasharray="2 5"/>
+              </g>
+              <path d="M30,34 l3,8 l8,3 l-8,3 l-3,8 l-3,-8 l-8,-3 l8,-3 Z" fill="#fff" opacity="0.9"/>
+              <path d="M170,50 l2,5 l5,2 l-5,2 l-2,5 l-2,-5 l-5,-2 l5,-2 Z" fill="#fff" opacity="0.85"/>
+              <circle cx="160" cy="24" r="2.5" fill="#fff" opacity="0.8"/>
+              <circle cx="44" cy="74" r="2" fill="#fff" opacity="0.7"/>
+              <path d="M60,96 C54,56 78,32 103,32 C130,32 152,54 146,98 C150,128 152,156 142,178 L64,178 C52,156 54,128 60,96 Z" fill="#24120d"/>
+              <path d="M36,200 C38,170 68,152 102,152 C136,152 164,170 166,200 Z" fill="#f28c28"/>
+              <path d="M84,153 Q102,176 120,153" fill="none" stroke="#f6d36b" stroke-width="4" stroke-linecap="round"/>
+              <path d="M44,178 C70,166 110,186 150,160 L160,176 C120,200 76,186 50,196 Z" fill="#d6336c"/>
+              <path d="M48,186 C74,176 112,194 154,170" fill="none" stroke="#f6d36b" stroke-width="2" stroke-dasharray="3 3"/>
+              <path d="M93,126 h18 v26 q-9,6 -18,0 Z" fill="#c98a5e"/>
+              <path d="M70,90 C70,62 86,54 102,54 C118,54 134,62 134,90 C134,114 121,133 102,138 C83,133 70,114 70,90 Z" fill="#d9a072"/>
+              <g fill="#f2b33d">
+                <circle cx="71" cy="111" r="2"/><path d="M66,119 q5,-8 10,0 Z"/><circle cx="67" cy="122" r="1.2"/><circle cx="71" cy="123" r="1.2"/><circle cx="75" cy="122" r="1.2"/>
+                <circle cx="133" cy="111" r="2"/><path d="M128,119 q5,-8 10,0 Z"/><circle cx="129" cy="122" r="1.2"/><circle cx="133" cy="123" r="1.2"/><circle cx="137" cy="122" r="1.2"/>
+              </g>
+              <path d="M68,92 C64,60 84,46 104,47 C126,48 142,62 136,94 C132,80 126,72 116,68 C118,76 114,82 110,84 C108,76 102,70 94,70 C92,78 84,84 76,86 C76,80 72,86 68,92 Z" fill="#24120d"/>
+              <path d="M84,58 q12,-6 26,-2" stroke="#7a4434" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85"/>
+              <path d="M82,86 q7,-4 14,-1" stroke="#24120d" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M108,85 q7,-3 14,1" stroke="#24120d" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <circle cx="102" cy="88" r="2.3" fill="#d6202f"/>
               <g class="eyes">
-                <ellipse cx="91" cy="99" rx="3.6" ry="4.4" fill="#2a1712"/>
-                <ellipse cx="114" cy="99" rx="3.6" ry="4.4" fill="#2a1712"/>
+                <ellipse cx="89" cy="100" rx="7.5" ry="9" fill="#fff"/>
+                <ellipse cx="89.5" cy="101" rx="6" ry="7.8" fill="url(#iris)"/>
+                <circle cx="89.5" cy="102" r="2.6" fill="#1a0b06"/>
+                <circle cx="87" cy="97.5" r="2.4" fill="#fff"/>
+                <circle cx="92" cy="105" r="1.1" fill="#fff"/>
+                <ellipse cx="115" cy="100" rx="7.5" ry="9" fill="#fff"/>
+                <ellipse cx="114.5" cy="101" rx="6" ry="7.8" fill="url(#iris)"/>
+                <circle cx="114.5" cy="102" r="2.6" fill="#1a0b06"/>
+                <circle cx="112" cy="97.5" r="2.4" fill="#fff"/>
+                <circle cx="117" cy="105" r="1.1" fill="#fff"/>
+                <path d="M80,94 Q89,88 98,93 l2,-2" stroke="#1a0b06" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                <path d="M124,94 Q115,88 106,93 l-2,-2" stroke="#1a0b06" stroke-width="2.6" fill="none" stroke-linecap="round"/>
               </g>
-              <g fill="none" stroke="#3b2a20" stroke-width="2">
-                <circle cx="91" cy="99" r="10"/>
-                <circle cx="114" cy="99" r="10"/>
-                <path d="M101,99 h3"/>
+              <g fill="none" stroke="#5a3a2a" stroke-width="1.4" opacity="0.85">
+                <circle cx="89" cy="100" r="11.5"/>
+                <circle cx="115" cy="100" r="11.5"/>
+                <path d="M100.5,99 q1.5,-1.5 3,0"/>
               </g>
-              <circle cx="82" cy="114" r="5" fill="#e48a7a" opacity="0.45"/>
-              <circle cx="123" cy="114" r="5" fill="#e48a7a" opacity="0.45"/>
-              <path d="M102,104 q2.5,6 -2,8" stroke="#a96d48" stroke-width="2" fill="none" stroke-linecap="round"/>
-              <path d="M92,120 q10,9 21,0" stroke="#7a3b2a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+              <ellipse cx="79" cy="115" rx="6" ry="3" fill="#ff7f8e" opacity="0.45"/>
+              <ellipse cx="125" cy="115" rx="6" ry="3" fill="#ff7f8e" opacity="0.45"/>
+              <path d="M76,116 l2,-3 M79,116 l2,-3 M82,116 l2,-3 M122,116 l2,-3 M125,116 l2,-3 M128,116 l2,-3" stroke="#e2556b" stroke-width="1" opacity="0.6"/>
+              <path d="M102,108 l-1.5,3" stroke="#b5764d" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M96,119 q6,6 12,0 q-6,2.5 -12,0 Z" fill="#b8434a"/>
               <g class="wave-arm">
-                <path d="M150,200 C151,180 156,162 163,150" stroke="#2f7a7d" stroke-width="16" stroke-linecap="round" fill="none"/>
-                <circle cx="165" cy="140" r="10" fill="#c98c63"/>
-                <path d="M160,131 v-7 M165,130 v-9 M170,131 v-7" stroke="#c98c63" stroke-width="4" stroke-linecap="round"/>
+                <path d="M150,200 C151,180 156,162 163,150" stroke="#f28c28" stroke-width="16" stroke-linecap="round" fill="none"/>
+                <path d="M156,152 l13,2 M155,156 l13,2" stroke="#f6d36b" stroke-width="2.4" stroke-linecap="round"/>
+                <circle cx="165" cy="140" r="10" fill="#d9a072"/>
+                <path d="M160,131 v-7 M165,130 v-9 M170,131 v-7" stroke="#d9a072" stroke-width="4" stroke-linecap="round"/>
               </g>
             </svg>
           </div>
-          <figcaption>hi, that's me!</figcaption>
+          <figcaption>namaste, that's me! &#10047;</figcaption>
+          <span class="bubble">Namaste!</span>
+          <span class="sparkle sp1" aria-hidden="true"></span>
+          <span class="sparkle sp2" aria-hidden="true"></span>
+          <span class="sparkle sp3" aria-hidden="true"></span>
           <span class="tape tape-l" aria-hidden="true"></span>
           <span class="tape tape-r" aria-hidden="true"></span>
         </figure>

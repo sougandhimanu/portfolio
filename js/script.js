@@ -248,6 +248,59 @@
 
   playPhoto();
 
+  /* ---------- Marigold garland across the top ---------- */
+  const toran = document.getElementById('toran');
+  const MARIGOLDS = [['#ff9f1c', '#f77f00'], ['#ffd23f', '#f4a300']];
+
+  const hangToran = () => {
+    toran.innerHTML = '';
+    const step = 22;
+    const swag = 9; // flowers per drooping loop
+    const count = Math.ceil(window.innerWidth / step) + 1;
+    for (let i = 0; i < count; i++) {
+      const droop = Math.sin(((i % swag) / swag) * Math.PI) * 12;
+      const bloom = document.createElement('span');
+      bloom.className = 'bloom';
+      const [m1, m2] = MARIGOLDS[i % 2];
+      bloom.style.cssText = `left:${i * step - 8}px;top:${2 + droop}px;--m1:${m1};--m2:${m2}`;
+      toran.appendChild(bloom);
+      if (i % swag === 0) {
+        // Mango leaves hang where each loop is tied up
+        for (const side of [-1, 1]) {
+          const leaf = document.createElement('span');
+          leaf.className = 'leaf';
+          leaf.style.cssText = `left:${i * step - 7 + side * 6}px;top:15px;transform:rotate(${80 + side * 18}deg)`;
+          toran.appendChild(leaf);
+        }
+      }
+    }
+  };
+  hangToran();
+  let toranTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(toranTimer);
+    toranTimer = setTimeout(hangToran, 150);
+  });
+
+  /* ---------- Petals drifting down in the background ---------- */
+  if (!reduceMotion) {
+    const petals = document.getElementById('petals');
+    const PETAL_COLOURS = ['#ff9f1c', '#ffd23f', '#f77f00', '#ff7eb6', '#e63973'];
+    for (let i = 0; i < 16; i++) {
+      const petal = document.createElement('span');
+      petal.className = 'petal';
+      const duration = 11 + Math.random() * 9;
+      petal.style.cssText = [
+        `left:${Math.random() * 100}%`,
+        `background:${PETAL_COLOURS[i % PETAL_COLOURS.length]}`,
+        `animation-duration:${duration}s`,
+        `animation-delay:${-Math.random() * duration}s`,
+        `transform:scale(${0.7 + Math.random() * 0.6})`,
+      ].join(';');
+      petals.appendChild(petal);
+    }
+  }
+
   /* ---------- Footer year ---------- */
   document.getElementById('year').textContent = new Date().getFullYear();
 })();

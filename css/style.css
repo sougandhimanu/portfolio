@@ -9,12 +9,13 @@
   --ink: #2b2118;
   --ink-soft: #5b4a3a;
   --ink-faint: #9a8670;
-  --accent: #8b2e2e;
-  --teal: #2f7a7d;
+  --accent: #a3214f;
+  --teal: #0f7173;
   --gold: #c9973a;
 
-  --f-hand: 'Caveat', 'Segoe Print', cursive;
-  --f-body: 'Lora', Georgia, serif;
+  --f-hand: 'Kalam', 'Segoe Print', cursive;
+  --f-head: 'Baloo 2', 'Segoe UI', system-ui, sans-serif;
+  --f-body: 'Mukta', 'Segoe UI', system-ui, sans-serif;
 
   /* Width of the chocolate box, and one page of the open book.
      Both are sized from the window's width AND height so the book
@@ -43,12 +44,10 @@ body {
   min-height: 100vh;
   font-family: var(--f-body);
   color: var(--ink);
-  background-color: var(--wood);
+  background-color: #24205a;
   background-image:
-    repeating-linear-gradient(91deg, rgba(255, 255, 255, 0.035) 0 2px, transparent 2px 11px),
-    repeating-linear-gradient(89deg, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 27px),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0 60px, rgba(255, 255, 255, 0.025) 60px 140px),
-    linear-gradient(180deg, #7a4b2b, #55331c);
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.09' stroke-width='1.4'%3E%3Ccircle cx='36' cy='36' r='5'/%3E%3Cpath d='M36 22c4 5 4 9 0 14c-4-5-4-9 0-14zM36 50c4-5 4-9 0-14c-4 5-4 9 0 14zM22 36c5-4 9-4 14 0c-5 4-9 4-14 0zM50 36c-5-4-9-4-14 0c5 4 9 4 14 0z'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='0' cy='0' r='2.5'/%3E%3Ccircle cx='72' cy='0' r='2.5'/%3E%3Ccircle cx='0' cy='72' r='2.5'/%3E%3Ccircle cx='72' cy='72' r='2.5'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(170deg, #2b2470 0%, #3a1f63 55%, #5a2160 100%);
   overflow-x: hidden;
 }
 
@@ -60,7 +59,8 @@ body::before {
   pointer-events: none;
   z-index: 0;
   background:
-    radial-gradient(ellipse 60% 55% at 22% 6%, rgba(255, 214, 140, 0.32), transparent 70%),
+    radial-gradient(ellipse 60% 55% at 22% 6%, rgba(255, 190, 120, 0.28), transparent 70%),
+    radial-gradient(ellipse 45% 40% at 92% 96%, rgba(255, 150, 60, 0.22), transparent 70%),
     radial-gradient(ellipse at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
 }
 
@@ -145,14 +145,14 @@ body::before {
   transform: rotate(-3deg);
   padding: 6px 18px 8px;
   font-family: var(--f-hand);
-  font-size: 1.3rem;
+  font-size: 1.02rem;
   line-height: 1.1;
   text-align: center;
   color: #4a3a12;
-  background: #fbe38a;
+  background: #ffd3e2;
   box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.55);
 }
-@media (max-width: 759px) { .sticky-note { font-size: 1.05rem; top: 10px; bottom: auto; left: 50%; transform: translateX(-50%) rotate(-2deg); } }
+@media (max-width: 759px) { .sticky-note { font-size: 0.92rem; top: 10px; bottom: auto; left: 50%; transform: translateX(-50%) rotate(-2deg); } }
 
 .hint-touch { display: none; }
 @media (hover: none) {
@@ -179,7 +179,7 @@ body::before {
 }
 .now-title {
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.08rem;
   line-height: 1.2;
   color: var(--accent);
 }
@@ -187,7 +187,7 @@ body::before {
 .now-note li {
   position: relative;
   padding-left: 24px;
-  font-size: 1.3rem;
+  font-size: 1.02rem;
   line-height: 24px;
 }
 .now-note li::before {
@@ -205,7 +205,7 @@ body::before {
   background: radial-gradient(circle at 35% 30%, #ff8a80, #c62828 60%, #7f1515);
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
 }
-@media (max-width: 1180px) { .now-note { width: 180px; padding: 12px 12px 10px; } .now-title { font-size: 1.2rem; } .now-note li { font-size: 1.15rem; } }
+@media (max-width: 1180px) { .now-note { width: 180px; padding: 12px 12px 10px; } .now-title { font-size: 1rem; } .now-note li { font-size: 0.95rem; } }
 @media (max-width: 759px) {
   .now-note { position: relative; top: auto; right: auto; width: min(300px, 86vw); margin: 18px auto 0; transform: rotate(-1.5deg); }
 }
@@ -246,8 +246,8 @@ body::before {
   border-radius: 10px;
   background:
     radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08), transparent 60%),
-    linear-gradient(135deg, #7d2328, #4e1216);
-  box-shadow: 0 34px 60px -24px rgba(0, 0, 0, 0.8), inset 0 0 0 2px rgba(201, 151, 58, 0.35);
+    linear-gradient(135deg, #12707a, #083c45);
+  box-shadow: 0 34px 60px -24px rgba(0, 0, 0, 0.8), inset 0 0 0 3px #e0b04a, inset 0 0 0 6px #0a4a52, inset 0 0 0 7px rgba(224, 176, 74, 0.6);
 }
 /* Shadow in the gutter of an open spread */
 .book.ready:not(.single)::after {
@@ -290,7 +290,13 @@ body::before {
 /* Paper: faint ruled lines and a shadow toward the spine */
 .base, .face {
   background-color: var(--paper);
-  background-image: repeating-linear-gradient(transparent 0 calc(var(--fs) * 1.9 - 1px), rgba(110, 140, 180, 0.13) calc(var(--fs) * 1.9 - 1px) calc(var(--fs) * 1.9));
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23c9973a' stroke-opacity='0.55' stroke-width='1'%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='16'/%3E%3Cpath d='M16 0c3 6 3 10 0 16M0 16c6 3 10 3 16 0M11 11c5 1 8 4 9 9'/%3E%3Ccircle cx='0' cy='0' r='22' stroke-dasharray='1.5 3'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23c9973a' stroke-opacity='0.55' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Cpath d='M24 40c-3-6-3-10 0-16M40 24c-6-3-10-3-16 0M29 29c-5-1-8-4-9-9'/%3E%3Ccircle cx='40' cy='40' r='22' stroke-dasharray='1.5 3'/%3E%3C/g%3E%3C/svg%3E"),
+    repeating-linear-gradient(transparent 0 calc(var(--fs) * 1.9 - 1px), rgba(110, 140, 180, 0.13) calc(var(--fs) * 1.9 - 1px) calc(var(--fs) * 1.9));
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: left top, right bottom, 0 0;
+  background-size: calc(var(--fs) * 3.4) calc(var(--fs) * 3.4), calc(var(--fs) * 3.4) calc(var(--fs) * 3.4), auto;
 }
 .face.front, .base-right { box-shadow: inset 22px 0 26px -20px rgba(70, 45, 20, 0.45), inset -1px 0 0 rgba(0, 0, 0, 0.06); }
 .face.back, .base-left { box-shadow: inset -22px 0 26px -20px rgba(70, 45, 20, 0.45), inset 1px 0 0 rgba(0, 0, 0, 0.06); }
@@ -336,9 +342,9 @@ body::before {
   color: var(--ink-faint);
 }
 .page h2 {
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: 2.6em;
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: 2em;
   line-height: 1;
   color: var(--accent);
   margin: 0.1em 0 0.5em;
@@ -355,7 +361,7 @@ body::before {
 
 .lede {
   font-family: var(--f-hand);
-  font-size: 1.65em;
+  font-size: 1.2em;
   line-height: 1.15;
   margin-bottom: 0.6em;
 }
@@ -365,7 +371,7 @@ body::before {
   padding-left: 0.8em;
   border-left: 3px solid var(--gold);
   font-family: var(--f-hand);
-  font-size: 1.3em;
+  font-size: 0.98em;
   line-height: 1.2;
   color: var(--ink-soft);
 }
@@ -387,23 +393,23 @@ body::before {
 .polaroid figcaption {
   padding: 0.35em 0 0.5em;
   font-family: var(--f-hand);
-  font-size: 1.35em;
+  font-size: 1em;
   color: var(--ink-soft);
 }
 .tape {
   position: absolute;
   top: -10px;
   width: 34%; height: 22px;
-  background: rgba(240, 225, 170, 0.75);
+  background: repeating-linear-gradient(45deg, rgba(242, 140, 40, 0.8) 0 6px, rgba(255, 226, 150, 0.8) 6px 12px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .tape-l { left: -8%; transform: rotate(-32deg); }
 .tape-r { right: -8%; transform: rotate(30deg); }
 
 .p-name {
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: 2.15em;
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: 1.7em;
   line-height: 1.05;
 }
 .p-role { font-weight: 600; color: var(--accent); margin-top: 0.2em; }
@@ -460,9 +466,9 @@ body::before {
   place-items: center;
   width: 2.9em; height: 2.9em;
   border-radius: 50%;
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: 1.6em;
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: 1.35em;
   color: var(--accent);
   border: 2px solid var(--accent);
   transform: rotate(-8deg);
@@ -522,7 +528,7 @@ body::before {
 /* Last page */
 .page-end { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.6em; }
 .page-end p + p { margin-top: 0; }
-.the-end { font-family: var(--f-hand); font-weight: 700; font-size: 3.4em; color: var(--accent); line-height: 1; }
+.the-end { font-family: var(--f-head); font-weight: 800; font-size: 2.6em; color: var(--accent); line-height: 1; }
 .fine { margin-top: 2em !important; font-size: 0.8em; color: var(--ink-faint); }
 
 /* ============================================
@@ -545,7 +551,7 @@ body::before {
 }
 .nav-btn:hover:not(:disabled) { background: rgba(30, 18, 10, 0.8); }
 .nav-btn:disabled { opacity: 0.35; cursor: default; }
-.nav-label { min-width: 13ch; text-align: center; font-family: var(--f-hand); font-size: 1.4rem; }
+.nav-label { min-width: 13ch; text-align: center; font-family: var(--f-hand); font-size: 1.1rem; }
 
 /* Bookmarks: coloured ribbons sticking out of the top of the book */
 .book-wrap { position: relative; }
@@ -669,8 +675,8 @@ body::before {
   overflow: hidden;
   background:
     radial-gradient(ellipse at 30% 15%, rgba(255, 255, 255, 0.18), transparent 55%),
-    linear-gradient(160deg, #8e2a3a, #5a1220);
-  box-shadow: inset 0 0 0 4px #c9973a, inset 0 0 0 7px #5a1220, 0 22px 34px -16px rgba(0, 0, 0, 0.85);
+    linear-gradient(160deg, #12707a, #083c45);
+  box-shadow: inset 0 0 0 4px #e0b04a, inset 0 0 0 7px #083c45, 0 22px 34px -16px rgba(0, 0, 0, 0.85);
 }
 .lid-front::before,
 .lid-front::after {
@@ -699,9 +705,9 @@ body::before {
   box-shadow: 0 0 0 3px #c9973a, 0 0 0 6px rgba(90, 18, 32, 0.6), 0 8px 16px -6px rgba(0, 0, 0, 0.6);
 }
 .lid-label {
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: calc(var(--bw) * 0.14);
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: calc(var(--bw) * 0.12);
   line-height: 1;
   color: var(--accent);
 }
@@ -718,7 +724,7 @@ body::before {
   padding: 2px 10px;
   border-radius: 999px;
   font-family: var(--f-hand);
-  font-size: max(13px, calc(var(--bw) * 0.055));
+  font-size: max(12px, calc(var(--bw) * 0.044));
   color: #fbf1dc;
   background: rgba(40, 8, 14, 0.55);
   animation: hint-pulse 2.2s ease-in-out infinite;
@@ -731,13 +737,13 @@ body::before {
   background:
     repeating-linear-gradient(45deg, transparent 0 14px, rgba(255, 210, 140, 0.18) 14px 15px),
     repeating-linear-gradient(-45deg, transparent 0 14px, rgba(255, 210, 140, 0.18) 14px 15px),
-    radial-gradient(ellipse at 50% 40%, #a33447, #6a1626);
+    radial-gradient(ellipse at 50% 40%, #c2306e, #6e1440);
   box-shadow: inset 0 0 0 4px #c9973a, inset 0 0 22px rgba(0, 0, 0, 0.45);
 }
 .lid-foil {
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: calc(var(--bw) * 0.12);
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: calc(var(--bw) * 0.1);
   color: #f4cf7a;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
@@ -750,7 +756,7 @@ body::before {
   width: 100%;
   padding: calc(var(--bw) * 0.056);
   border-radius: 8px;
-  background: linear-gradient(160deg, #6e1a28, #4a0f1a);
+  background: linear-gradient(160deg, #8a1650, #4e0c2e);
   box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.85), inset 0 0 0 4px #c9973a, inset 0 0 0 7px #5a1220;
 }
 .choc {
@@ -790,9 +796,9 @@ body::before {
 }
 .reveal-name {
   display: block;
-  font-family: var(--f-hand);
-  font-weight: 700;
-  font-size: calc(var(--bw) * 0.1);
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: calc(var(--bw) * 0.085);
   line-height: 1;
   color: var(--accent);
 }
@@ -830,6 +836,129 @@ body::before {
   to   { opacity: 1; transform: rotate(30deg) scale(1); }
 }
 
+/* ============================================
+   Anime + Indian decor
+   ============================================ */
+
+/* Marigold garland (toran) along the top edge; flowers are placed by script.js */
+.toran {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 34px;
+  z-index: 0; /* behind the notes and the book, above the tablecloth */
+  pointer-events: none;
+}
+.toran .bloom {
+  position: absolute;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #ffd166 0 22%, transparent 24%),
+    repeating-conic-gradient(var(--m1) 0 18deg, var(--m2) 18deg 36deg);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.35);
+}
+.toran .leaf {
+  position: absolute;
+  width: 14px; height: 7px;
+  border-radius: 0 100% 0 100%;
+  background: linear-gradient(135deg, #3fa34d, #1d6b2e);
+}
+
+/* Petals drifting down behind the book and the box */
+.petals { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.petal {
+  position: absolute;
+  top: -20px;
+  width: 11px; height: 8px;
+  border-radius: 80% 0 80% 0;
+  opacity: 0.85;
+  animation: petal-fall linear infinite;
+}
+@keyframes petal-fall {
+  0%   { transform: translate(0, -5vh) rotate(0deg); }
+  25%  { transform: translate(28px, 22vh) rotate(110deg); }
+  50%  { transform: translate(-18px, 50vh) rotate(220deg); }
+  75%  { transform: translate(24px, 78vh) rotate(320deg); }
+  100% { transform: translate(-10px, 106vh) rotate(420deg); }
+}
+
+/* A clay diya with a flickering flame */
+.diya {
+  position: absolute;
+  z-index: 2;
+  right: 34px; bottom: 22px;
+  width: 70px; height: 30px;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 9px, rgba(255, 210, 120, 0.55) 9px 11px) 0 8px / 100% 5px no-repeat,
+    linear-gradient(180deg, #c8662c, #7a3214);
+  box-shadow: 0 10px 14px -6px rgba(0, 0, 0, 0.6), inset 0 4px 0 #e08a4a;
+}
+.diya .flame {
+  position: absolute;
+  left: 50%; bottom: 100%;
+  width: 14px; height: 24px;
+  margin-left: -7px;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  background: radial-gradient(ellipse at 50% 75%, #fff 0 15%, #ffe066 35%, #ff8c1a 70%, transparent 72%);
+  box-shadow: 0 0 18px 8px rgba(255, 170, 60, 0.45), 0 0 50px 22px rgba(255, 140, 40, 0.18);
+  transform-origin: 50% 100%;
+  animation: flicker 0.25s ease-in-out infinite alternate;
+}
+@keyframes flicker {
+  from { transform: scale(1, 1) rotate(-2deg); }
+  to   { transform: scale(0.92, 1.08) rotate(2deg); }
+}
+@media (max-width: 759px) { .diya { display: none; } }
+
+/* Anime speech bubble and sparkles on the photo */
+.bubble {
+  position: absolute;
+  z-index: 2;
+  top: -2%; right: -30%;
+  padding: 0.25em 0.7em;
+  border-radius: 1em;
+  font-family: var(--f-head);
+  font-weight: 800;
+  font-size: 0.95em;
+  color: var(--accent);
+  background: #fff;
+  border: 2px solid var(--ink);
+  transform: rotate(8deg);
+  box-shadow: 0 3px 0 var(--ink);
+}
+.bubble::after {
+  content: '';
+  position: absolute;
+  left: 14%; bottom: -9px;
+  width: 12px; height: 12px;
+  background: #fff;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  transform: rotate(45deg);
+}
+.polaroid.drop .bubble { animation: bubble-pop 0.5s cubic-bezier(0.3, 1.8, 0.5, 1) 1.9s both; }
+@keyframes bubble-pop {
+  from { opacity: 0; transform: rotate(8deg) scale(0.3); }
+  to   { opacity: 1; transform: rotate(8deg) scale(1); }
+}
+
+.sparkle {
+  position: absolute;
+  z-index: 2;
+  width: 16px; height: 16px;
+  background: #ffd23f;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  animation: twinkle 1.8s ease-in-out infinite;
+}
+.sp1 { left: -14%; top: 22%; }
+.sp2 { right: -12%; top: 62%; width: 12px; height: 12px; background: #ff7eb6; animation-delay: -0.6s; }
+.sp3 { left: -6%; bottom: 6%; width: 10px; height: 10px; background: #7fe0e8; animation-delay: -1.2s; }
+@keyframes twinkle {
+  0%, 100% { transform: scale(0.4) rotate(0deg); opacity: 0.4; }
+  50%      { transform: scale(1.1) rotate(45deg); opacity: 1; }
+}
+
 /* Copy-to-clipboard toast */
 .copy-toast {
   position: fixed;
@@ -840,7 +969,7 @@ body::before {
   padding: 10px 18px;
   transform: translate(-50%, 12px) rotate(-1deg);
   font-family: var(--f-hand);
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   text-align: center;
   color: #4a3a12;
   background: #fbe38a;
