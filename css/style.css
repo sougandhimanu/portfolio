@@ -949,16 +949,8 @@ body::before {
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s ease;
-  animation: nudge 5s ease-in-out 2.5s infinite;
 }
 .basket:hover { transform: rotate(-2deg) scale(1.03); }
-.basket.open { animation: none; }
-@keyframes nudge {
-  0%, 86%, 100% { transform: rotate(0); }
-  89% { transform: rotate(-3deg); }
-  92% { transform: rotate(3deg); }
-  95% { transform: rotate(-1.5deg); }
-}
 .basket .books { transition: transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1); }
 .basket.open .books { transform: translateY(-14px); }
 .basket-hint {
