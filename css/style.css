@@ -1,12 +1,12 @@
 /* ============================================
-   A picnic in a flower garden: Sougandhi lies on
-   a blanket next to her open book (the portfolio),
-   with a basket holding treats and the Polymath
-   box of chocolates (the extracurriculars).
+   A flat-lay picnic: a vintage botanical book
+   (the portfolio) on a crochet lace blanket in a
+   daisy field, with a basket of books, a straw
+   hat, a letter, a camera, tea and cookies.
    ============================================ */
 :root {
   --wood: #6b4226;
-  --paper: #fbf6ea;
+  --paper: #f4ebd7;
   --ink: #2b2118;
   --ink-soft: #5b4a3a;
   --ink-faint: #9a8670;
@@ -14,9 +14,9 @@
   --teal: #0f7173;
   --gold: #c9973a;
 
-  --f-hand: 'Kalam', 'Segoe Print', cursive;
-  --f-head: 'Baloo 2', 'Segoe UI', system-ui, sans-serif;
-  --f-body: 'Mukta', 'Segoe UI', system-ui, sans-serif;
+  --f-hand: 'Caveat', 'Segoe Print', cursive;
+  --f-head: 'Cormorant Garamond', Georgia, serif;
+  --f-body: 'Lora', Georgia, serif;
 
   /* Width of the picnic corner, and one page of the open book. Both
      are sized from the window's width AND height so the book and the
@@ -167,16 +167,14 @@ body::before {
 }
 .book.ready.single { width: var(--pw); }
 
-/* Leather cover peeking out around the pages */
+/* A thick block of aged pages under the open spread */
 .book.ready::before {
   content: '';
   position: absolute;
-  inset: -12px -14px;
-  border-radius: 10px;
-  background:
-    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.08), transparent 60%),
-    linear-gradient(135deg, #8d9870, #5a6545);
-  box-shadow: 0 34px 60px -24px rgba(60, 40, 20, 0.7), inset 0 0 0 3px #d9b56a, inset 0 0 0 6px #4b5538, inset 0 0 0 7px rgba(217, 181, 106, 0.6);
+  inset: -7px -9px -10px;
+  border-radius: 5px;
+  background: repeating-linear-gradient(0deg, #e2d6bb 0 1px, #f2e9d4 1px 3px);
+  box-shadow: 0 32px 50px -22px rgba(25, 18, 5, 0.75), 0 4px 10px rgba(25, 18, 5, 0.3);
 }
 /* Shadow in the gutter of an open spread */
 .book.ready:not(.single)::after {
@@ -216,16 +214,15 @@ body::before {
 }
 .face.back { transform: rotateY(180deg); }
 
-/* Paper: faint ruled lines and a shadow toward the spine */
+/* Aged botanical paper with a small daisy and buttercup drawing */
 .base, .face {
   background-color: var(--paper);
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23c9973a' stroke-opacity='0.55' stroke-width='1'%3E%3Ccircle cx='0' cy='0' r='10'/%3E%3Ccircle cx='0' cy='0' r='16'/%3E%3Cpath d='M16 0c3 6 3 10 0 16M0 16c6 3 10 3 16 0M11 11c5 1 8 4 9 9'/%3E%3Ccircle cx='0' cy='0' r='22' stroke-dasharray='1.5 3'/%3E%3C/g%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cg fill='none' stroke='%23c9973a' stroke-opacity='0.55' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Cpath d='M24 40c-3-6-3-10 0-16M40 24c-6-3-10-3-16 0M29 29c-5-1-8-4-9-9'/%3E%3Ccircle cx='40' cy='40' r='22' stroke-dasharray='1.5 3'/%3E%3C/g%3E%3C/svg%3E"),
-    repeating-linear-gradient(transparent 0 calc(var(--fs) * 1.9 - 1px), rgba(110, 140, 180, 0.13) calc(var(--fs) * 1.9 - 1px) calc(var(--fs) * 1.9));
-  background-repeat: no-repeat, no-repeat, repeat;
-  background-position: left top, right bottom, 0 0;
-  background-size: calc(var(--fs) * 3.4) calc(var(--fs) * 3.4), calc(var(--fs) * 3.4) calc(var(--fs) * 3.4), auto;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 90'%3E%3Cg fill='none' stroke='%237d8a5a' stroke-width='1.1' stroke-linecap='round'%3E%3Cpath d='M30 88 C28 70 32 52 30 30'/%3E%3Cpath d='M38 88 C40 74 46 64 50 54'/%3E%3Cpath d='M30 66 c-9 -2 -13 -9 -13 -15 c7 2 11 7 13 15z M30 56 c9 -3 13 -10 12 -16 c-7 3 -11 8 -12 16z'/%3E%3C/g%3E%3Cg fill='%23f7f0e0' stroke='%23a89a7a' stroke-width='0.8'%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(40 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(80 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(120 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(160 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(200 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(240 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(280 30 22)'/%3E%3Cellipse cx='30' cy='14' rx='2.6' ry='8' transform='rotate(320 30 22)'/%3E%3C/g%3E%3Ccircle cx='30' cy='22' r='3.6' fill='%23e9c35a' stroke='%23b8932e' stroke-width='0.6'/%3E%3Cg fill='%23e9c35a' stroke='%23b8932e' stroke-width='0.6'%3E%3Ccircle cx='50' cy='50' r='2.6'/%3E%3Ccircle cx='47' cy='46' r='2.6'/%3E%3Ccircle cx='53' cy='46' r='2.6'/%3E%3Ccircle cx='48' cy='52' r='2.6'/%3E%3Ccircle cx='52' cy='53' r='2.6'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(150, 115, 60, 0.16) 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right calc(var(--fs) * 1.2) bottom calc(var(--fs) * 0.8), 0 0;
+  background-size: calc(var(--fs) * 3.2) auto, 100% 100%;
 }
 .face.front, .base-right { box-shadow: inset 22px 0 26px -20px rgba(70, 45, 20, 0.45), inset -1px 0 0 rgba(0, 0, 0, 0.06); }
 .face.back, .base-left { box-shadow: inset -22px 0 26px -20px rgba(70, 45, 20, 0.45), inset 1px 0 0 rgba(0, 0, 0, 0.06); }
@@ -329,7 +326,7 @@ body::before {
   position: absolute;
   top: -10px;
   width: 34%; height: 22px;
-  background: repeating-linear-gradient(45deg, rgba(242, 140, 40, 0.8) 0 6px, rgba(255, 226, 150, 0.8) 6px 12px);
+  background: repeating-linear-gradient(45deg, rgba(216, 137, 154, 0.7) 0 6px, rgba(246, 236, 223, 0.85) 6px 12px);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 .tape-l { left: -8%; transform: rotate(-32deg); }
@@ -836,136 +833,95 @@ body::before {
 }
 
 /* ============================================
-   The garden: sky, sun, clouds, hills, meadow
+   The daisy field, seen from above
    ============================================ */
 .garden { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
-.sun {
+.field {
   position: absolute;
-  top: -18vw; right: -6vw;
-  width: 52vw; height: 52vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 246, 220, 0.95) 0 7%, rgba(255, 222, 168, 0.6) 22%, rgba(255, 206, 140, 0.18) 45%, transparent 66%);
-}
-.cloud {
-  position: absolute;
-  width: 140px; height: 40px;
-  border-radius: 40px;
-  background: #fff;
-  opacity: 0.92;
-  animation: drift linear infinite;
-}
-.cloud::before, .cloud::after { content: ''; position: absolute; border-radius: 50%; background: #fff; }
-.cloud::before { width: 64px; height: 64px; left: 22px; top: -30px; }
-.cloud::after  { width: 48px; height: 48px; left: 70px; top: -20px; }
-.c1 { top: 9vh;  left: -12vw; animation-duration: 90s; }
-.c2 { top: 20vh; left: 30vw; transform: scale(0.75); animation-duration: 120s; animation-delay: -60s; }
-.c3 { top: 4vh;  left: 60vw; transform: scale(0.6); animation-duration: 140s; animation-delay: -30s; }
-@keyframes drift { from { translate: -20vw 0; } to { translate: 120vw 0; } }
-
-.hills {
-  position: absolute;
-  left: 0; right: 0;
-  top: 33vh; height: 16vh;
+  inset: 0;
   background:
-    radial-gradient(ellipse 38% 100% at 18% 100%, #b8bd8c 98%, transparent 100%),
-    radial-gradient(ellipse 46% 120% at 72% 100%, #a8b17e 98%, transparent 100%);
-  filter: blur(1px);
+    radial-gradient(ellipse 40% 30% at 20% 15%, rgba(140, 170, 90, 0.35), transparent 70%),
+    radial-gradient(ellipse 35% 30% at 85% 80%, rgba(20, 40, 15, 0.35), transparent 70%),
+    repeating-linear-gradient(72deg, rgba(150, 180, 100, 0.18) 0 1px, transparent 1px 6px),
+    repeating-linear-gradient(108deg, rgba(20, 40, 15, 0.22) 0 1px, transparent 1px 8px),
+    repeating-linear-gradient(88deg, rgba(110, 140, 70, 0.15) 0 2px, transparent 2px 11px),
+    #3f5a2b;
 }
-.hills::before {
-  content: '';
+.fdaisy {
   position: absolute;
-  left: -2%; right: -2%;
-  bottom: 18%; height: 80%;
-  background:
-    radial-gradient(ellipse 7% 55% at 6% 100%, #7c8a58 97%, transparent),
-    radial-gradient(ellipse 9% 70% at 15% 100%, #6e7d4c 97%, transparent),
-    radial-gradient(ellipse 6% 50% at 27% 100%, #808d5b 97%, transparent),
-    radial-gradient(ellipse 10% 80% at 63% 100%, #6b7a49 97%, transparent),
-    radial-gradient(ellipse 7% 60% at 74% 100%, #7e8b57 97%, transparent),
-    radial-gradient(ellipse 9% 75% at 88% 100%, #6e7d4c 97%, transparent);
-  filter: blur(2.5px);
-  opacity: 0.8;
-}
-.meadow {
-  position: absolute;
-  left: 0; right: 0;
-  top: 45vh; bottom: 0;
-  background: linear-gradient(180deg, #a9b277 0%, #8a9a5a 40%, #6c8045 100%);
-}
-
-/* Grass tufts and flowers sway in the breeze (placed by script.js) */
-.tuft, .flower {
-  position: absolute;
-  bottom: var(--y);
   left: var(--x);
-  transform-origin: 50% 100%;
-  animation: sway var(--d) ease-in-out var(--dl) infinite alternate;
+  top: var(--y);
+  width: var(--s);
+  height: var(--s);
+  animation: nod var(--d) ease-in-out var(--dl) infinite alternate;
 }
-.tuft {
-  width: var(--w);
-  height: var(--h);
-  background: linear-gradient(180deg, #c3c98a, #61783d);
-  clip-path: polygon(0 100%, 18% 8%, 32% 100%, 48% 0, 62% 100%, 80% 12%, 100% 100%);
-}
-.flower {
-  width: 2px;
-  height: var(--h);
-  background: #66803f;
-}
-.flower::before {
-  content: '';
-  position: absolute;
-  left: 50%; top: 0;
-  width: var(--s); height: var(--s);
-  transform: translate(-50%, -60%);
-  border-radius: 50%;
-  background:
-    radial-gradient(circle, #ffd23f 0 24%, transparent 27%),
-    repeating-conic-gradient(var(--c) 0 30deg, var(--c2) 30deg 60deg);
-}
-.flower::after {
-  content: '';
-  position: absolute;
-  left: 1px; top: 45%;
-  width: 9px; height: 5px;
-  border-radius: 0 100% 0 100%;
-  background: #75904a;
-}
-@keyframes sway {
-  from { transform: rotate(calc(var(--a) * -1)); }
-  to   { transform: rotate(var(--a)); }
+.fdaisy svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 2px 2px rgba(10, 20, 5, 0.45)); }
+.fdaisy.cup { width: calc(var(--s) * 0.55); height: calc(var(--s) * 0.55); border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #fff3a6, #f2c94c 45%, #d9a72c 100%); box-shadow: 0 2px 3px rgba(10, 20, 5, 0.4); }
+@keyframes nod {
+  from { transform: rotate(var(--r)) translate(0, 0) scale(1); }
+  to   { transform: rotate(calc(var(--r) + 14deg)) translate(2px, -1px) scale(1.05); }
 }
 
-/* Tall grass and flowers along the bottom edge, in front of the blanket */
-.foreground {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  height: 9vh;
-  z-index: 2;
-  pointer-events: none;
-}
-.foreground .tuft { --y: 0px; }
-.foreground .flower { --y: 0px; }
-@media (max-width: 759px) { .foreground { display: none; } }
+/* The cloth and tilted blanket hang past the edges; keep the page itself inside the window */
+.desk.picnic { overflow: hidden; }
 
-/* Picnic blanket under the book and the picnic corner */
+/* A plain beige cloth under the lace, so the lace holes read as crochet */
+.desk.picnic::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 2.5vw; right: 2.5vw;
+  top: 3vh; bottom: 2vh;
+  border-radius: 14px;
+  background: #cdbb98;
+  box-shadow: 0 18px 40px -16px rgba(10, 20, 5, 0.7);
+  transform: rotate(-1.5deg);
+}
+
+/* Crochet lace blanket */
 .blanket {
   position: absolute;
   z-index: 0;
-  left: 7vw; right: 4vw;
-  top: 50vh; bottom: 3vh;
-  border-radius: 10px;
+  left: 2.5vw; right: 2.5vw;
+  top: 3vh; bottom: 2vh;
+  border-radius: 14px;
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.4) 0 18%, transparent 34% 58%, rgba(140, 110, 70, 0.1) 74%, transparent 90%),
-    repeating-linear-gradient(0deg, rgba(150, 120, 90, 0.07) 0 1px, transparent 1px 4px),
-    repeating-linear-gradient(90deg, rgba(150, 120, 90, 0.06) 0 1px, transparent 1px 5px),
-    #f3ecdf;
-  box-shadow: 0 18px 30px -16px rgba(30, 60, 20, 0.6), inset 0 0 0 6px rgba(255, 255, 255, 0.6);
-  transform: rotate(-1deg);
+    radial-gradient(ellipse 60% 50% at 30% 25%, rgba(255, 255, 255, 0.35), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 80% 85%, rgba(120, 90, 50, 0.12), transparent 70%),
+    #efe5d0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath fill-rule='evenodd' fill='%23000' d='M0 0H48V48H0Z M24 20.5a3.5 3.5 0 1 0 .01 0z M24 9.6a2.8 2.8 0 1 0 .01 0z M33.4 15.1a2.8 2.8 0 1 0 .01 0z M33.4 26a2.8 2.8 0 1 0 .01 0z M24 31.4a2.8 2.8 0 1 0 .01 0z M14.6 26a2.8 2.8 0 1 0 .01 0z M14.6 15.1a2.8 2.8 0 1 0 .01 0z M0 -5a5 5 0 1 0 .01 0z M48 -5a5 5 0 1 0 .01 0z M0 43a5 5 0 1 0 .01 0z M48 43a5 5 0 1 0 .01 0z M24 -1.6a1.6 1.6 0 1 0 .01 0z M24 46.4a1.6 1.6 0 1 0 .01 0z M0 22.4a1.6 1.6 0 1 0 .01 0z M48 22.4a1.6 1.6 0 1 0 .01 0z'/%3E%3C/svg%3E") 0 0 / 40px 40px;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath fill-rule='evenodd' fill='%23000' d='M0 0H48V48H0Z M24 20.5a3.5 3.5 0 1 0 .01 0z M24 9.6a2.8 2.8 0 1 0 .01 0z M33.4 15.1a2.8 2.8 0 1 0 .01 0z M33.4 26a2.8 2.8 0 1 0 .01 0z M24 31.4a2.8 2.8 0 1 0 .01 0z M14.6 26a2.8 2.8 0 1 0 .01 0z M14.6 15.1a2.8 2.8 0 1 0 .01 0z M0 -5a5 5 0 1 0 .01 0z M48 -5a5 5 0 1 0 .01 0z M0 43a5 5 0 1 0 .01 0z M48 43a5 5 0 1 0 .01 0z M24 -1.6a1.6 1.6 0 1 0 .01 0z M24 46.4a1.6 1.6 0 1 0 .01 0z M0 22.4a1.6 1.6 0 1 0 .01 0z M48 22.4a1.6 1.6 0 1 0 .01 0z'/%3E%3C/svg%3E") 0 0 / 40px 40px;
+  transform: rotate(-1.5deg);
 }
 
+/* Sage cloth and a daisy bouquet in the bottom-left corner */
+.cloth {
+  position: absolute;
+  z-index: 0;
+  left: -6vw; bottom: -9vh;
+  width: 24vw; height: 19vh;
+  border-radius: 46% 54% 0 0 / 62% 50% 0 0;
+  background:
+    repeating-linear-gradient(68deg, rgba(255, 255, 255, 0.07) 0 22px, rgba(20, 35, 15, 0.1) 22px 46px),
+    linear-gradient(160deg, #94a77f, #6c8160);
+  box-shadow: 0 -6px 18px rgba(20, 30, 10, 0.3);
+  transform: rotate(9deg);
+}
+.bouquet {
+  position: absolute;
+  z-index: 0;
+  left: 0; bottom: 0;
+  width: 17vw; min-width: 150px;
+  height: auto;
+  transform: scaleX(-1) rotate(-8deg);
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 4px 4px rgba(20, 30, 10, 0.4));
+}
+@media (max-width: 759px) { .cloth, .bouquet { display: none; } }
+
 /* ============================================
-   Picnic corner: note, basket, Sougandhi
+   The picnic props, laid out beside the book
    ============================================ */
 .picnic-corner {
   position: relative;
@@ -973,60 +929,85 @@ body::before {
   flex-shrink: 0;
   width: var(--bw);
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 58fr 42fr;
+  grid-template-areas:
+    "basket hat"
+    "letter camera"
+    "tea cookies";
   align-items: center;
-  gap: calc(var(--bw) * 0.035);
+  justify-items: center;
+  gap: calc(var(--bw) * 0.035) calc(var(--bw) * 0.03);
 }
-.picnic-corner .now-note {
-  position: relative;
-  top: auto; right: auto;
-  width: 84%;
-  margin: 0;
-  transform: rotate(-2deg);
-}
+.picnic-corner svg { display: block; width: 100%; height: auto; overflow: visible; }
 
 .basket {
+  grid-area: basket;
   position: relative;
-  width: 74%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s ease;
   animation: nudge 5s ease-in-out 2.5s infinite;
 }
-.basket svg { display: block; width: 100%; height: auto; overflow: visible; }
 .basket:hover { transform: rotate(-2deg) scale(1.03); }
 .basket.open { animation: none; }
 @keyframes nudge {
   0%, 86%, 100% { transform: rotate(0); }
-  89% { transform: rotate(-4deg); }
-  92% { transform: rotate(4deg); }
-  95% { transform: rotate(-2deg); }
+  89% { transform: rotate(-3deg); }
+  92% { transform: rotate(3deg); }
+  95% { transform: rotate(-1.5deg); }
 }
-.basket .lid { transform-box: view-box; transition: transform 0.55s cubic-bezier(0.3, 1.4, 0.5, 1); }
-.basket .lid-l { transform-origin: 24px 66px; }
-.basket .lid-r { transform-origin: 176px 66px; }
-.basket.open .lid-l { transform: rotate(-118deg); }
-.basket.open .lid-r { transform: rotate(118deg); }
-.basket .peek { opacity: 0; transform: translateY(12px); transition: opacity 0.3s ease 0.2s, transform 0.4s ease 0.2s; }
-.basket.open .peek { opacity: 1; transform: none; }
+.basket .books { transition: transform 0.45s cubic-bezier(0.3, 1.5, 0.5, 1); }
+.basket.open .books { transform: translateY(-14px); }
 .basket-hint {
-  margin-top: -2px;
-  padding: 1px 10px;
+  margin-top: -4px;
+  padding: 0 10px 1px;
   border-radius: 999px;
   font-family: var(--f-hand);
-  font-size: max(12px, calc(var(--bw) * 0.045));
-  color: #fff;
-  background: rgba(90, 40, 30, 0.6);
+  font-size: max(13px, calc(var(--bw) * 0.05));
+  color: #fffaf0;
+  background: rgba(80, 55, 25, 0.7);
 }
 
-.lounger { display: block; width: 100%; height: auto; overflow: visible; }
-.lounger .eyes { transform-box: fill-box; transform-origin: center; animation: blink 4.2s infinite; }
-.lounger .leg { transform-box: view-box; animation: kick 1.7s ease-in-out infinite alternate; }
-.lounger .leg-f { transform-origin: 282px 152px; }
-.lounger .leg-b { transform-origin: 292px 152px; animation-delay: -0.85s; }
-@keyframes kick { from { transform: rotate(-14deg); } to { transform: rotate(10deg); } }
+.hat { grid-area: hat; width: 100%; transform: rotate(10deg); }
+.camera { grid-area: camera; width: 100%; transform: rotate(-12deg); }
+.teacup { grid-area: tea; width: 88%; }
+.cookies { grid-area: cookies; width: 100%; transform: rotate(6deg); }
+
+/* "Currently working on" as a handwritten letter */
+.picnic-corner .now-note.letter {
+  grid-area: letter;
+  position: relative;
+  top: auto; right: auto;
+  width: 100%;
+  margin: 0;
+  padding: calc(var(--bw) * 0.04) calc(var(--bw) * 0.035) calc(var(--bw) * 0.035);
+  font-family: var(--f-hand);
+  color: #4a3a26;
+  background:
+    linear-gradient(90deg, transparent 49.6%, rgba(120, 90, 50, 0.12) 50%, transparent 50.4%),
+    repeating-linear-gradient(transparent 0 calc(var(--bw) * 0.07 - 1px), rgba(120, 90, 50, 0.16) calc(var(--bw) * 0.07 - 1px) calc(var(--bw) * 0.07)),
+    #f4ebd8;
+  background-position: 0 0, 0 calc(var(--bw) * 0.035), 0 0;
+  box-shadow: 0 8px 14px -8px rgba(40, 25, 10, 0.55);
+  transform: rotate(-4deg);
+}
+.picnic-corner .now-note.letter .now-title {
+  font-weight: 700;
+  font-size: max(13px, calc(var(--bw) * 0.058));
+  line-height: 1.1;
+  color: #7a3f4c;
+}
+.picnic-corner .now-note.letter li {
+  padding-left: 1.1em;
+  font-size: max(12.5px, calc(var(--bw) * 0.053));
+  line-height: calc(var(--bw) * 0.07);
+}
+.letter-sign { text-align: right; font-size: max(12px, calc(var(--bw) * 0.048)); color: #6b5a3a; }
+.letter-daisy { position: absolute; top: -12px; right: 6px; width: calc(var(--bw) * 0.09) !important; transform: rotate(14deg); }
+.picnic-corner .pin { display: none; }
 
 /* ============================================
    Picnic spread: opens from the basket
@@ -1107,62 +1088,6 @@ body::before {
 @keyframes treat-pop { from { opacity: 0; transform: translateY(-40px) scale(0.5); } to { opacity: 1; transform: none; } }
 .spread .choc-box { margin-top: 0; animation: treat-pop 0.6s cubic-bezier(0.3, 1.6, 0.5, 1) 0.5s both; }
 
-/* Flower kinds: daisies, dusty roses, wildflowers */
-.flower.daisy::before {
-  background:
-    radial-gradient(circle, #f2c94c 0 24%, transparent 27%),
-    repeating-conic-gradient(#fbf7ef 0 20deg, #ece3d3 20deg 24deg);
-}
-.flower.rose::before {
-  border-radius: 46% 54% 50% 50%;
-  background:
-    radial-gradient(circle at 45% 42%, rgba(255, 255, 255, 0.5) 0 10%, transparent 12%),
-    radial-gradient(circle at 48% 45%, var(--c2) 0 22%, var(--c) 24% 48%, var(--c2) 50% 64%, var(--c) 66% 100%);
-}
-
-/* Fringed edges on the linen blanket */
-.blanket::before, .blanket::after {
-  content: '';
-  position: absolute;
-  left: 2%; right: 2%;
-  height: 9px;
-  background: repeating-linear-gradient(90deg, #ece2d0 0 2px, transparent 2px 6px);
-}
-.blanket::before { top: -8px; }
-.blanket::after { bottom: -8px; }
-
-/* Blurred roses in the near foreground, like a shallow depth of field */
-.dof {
-  position: fixed;
-  bottom: -40px;
-  z-index: 2;
-  width: 220px; height: 170px;
-  pointer-events: none;
-  filter: blur(3px);
-  animation: sway 4.2s ease-in-out infinite alternate;
-  transform-origin: 50% 100%;
-  --a: 2.5deg;
-}
-.dof-l { left: -50px; }
-.dof-r { right: -60px; animation-delay: -2s; }
-.dof span {
-  position: absolute;
-  border-radius: 46% 54% 50% 50%;
-  background: radial-gradient(circle at 48% 45%, #c96f82 0 20%, #e9a1b1 24% 50%, #d98596 54% 68%, #efb7c3 72% 100%);
-}
-.dof span:nth-child(1) { left: 40px; top: 30px; width: 70px; height: 64px; }
-.dof span:nth-child(2) { left: 110px; top: 70px; width: 58px; height: 54px; }
-.dof span:nth-child(3) { left: 10px; top: 92px; width: 52px; height: 48px; }
-.dof i {
-  position: absolute;
-  width: 70px; height: 30px;
-  border-radius: 0 100% 0 100%;
-  background: #6f8a45;
-}
-.dof i:nth-of-type(1) { left: 100px; top: 40px; transform: rotate(-25deg); }
-.dof i:nth-of-type(2) { left: 0; top: 60px; transform: rotate(20deg); }
-@media (max-width: 759px) { .dof { display: none; } }
-
 /* Golden-hour film: warm haze, soft vignette, fine grain */
 .film {
   position: fixed;
@@ -1180,6 +1105,28 @@ body::before {
   opacity: 0.07;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+
+/* Vintage book typography */
+.page h2 {
+  font-weight: 700;
+  font-size: 1.95em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5e4b2e;
+}
+.p-name, .the-end, .edu-grade { color: #4a3a26; }
+.lede { font-size: 1.35em; }
+.margin-note { font-size: 1.15em; }
+.polaroid figcaption { font-size: 1.15em; }
+.nav-label { font-size: 1.3rem; color: #4a3a26; text-shadow: none; }
+.book-nav {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(244, 235, 216, 0.92);
+  box-shadow: 0 6px 14px -8px rgba(40, 25, 10, 0.6);
+}
+.nav-btn { background: rgba(94, 75, 46, 0.85); }
+.nav-btn:hover:not(:disabled) { background: rgba(74, 58, 38, 1); }
 
 /* Copy-to-clipboard toast */
 .copy-toast {

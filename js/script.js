@@ -249,69 +249,33 @@
 
   playPhoto();
 
-  /* ---------- Meadow: grass and flowers swaying in the breeze ---------- */
-  const meadow = document.getElementById('meadow');
-  // Kind of flower, and its two petal shades
-  const FLOWERS = [
-    ['rose', '#e9a1b1', '#d98596'], ['rose', '#f2bcc6', '#e3a0ad'], ['rose', '#e7b3a0', '#d7957f'],
-    ['daisy', '#fbf7ef', '#ece3d3'], ['daisy', '#fbf7ef', '#ece3d3'], ['daisy', '#fbf7ef', '#ece3d3'],
-    ['wild', '#f2d27a', '#e6bd55'], ['wild', '#c9b6e4', '#b39fd6'], ['wild', '#f4c7a6', '#e9ad84'],
-  ];
+  /* ---------- Daisy field: daisies and buttercups nodding in the breeze ---------- */
+  const field = document.getElementById('field');
 
-  const foreground = document.getElementById('foreground');
-
-  const plantMeadow = () => {
-    meadow.innerHTML = '';
-    foreground.innerHTML = '';
-    const area = window.innerWidth * window.innerHeight;
-    const tufts = Math.round(Math.min(110, Math.max(40, area / 14000)));
-    const flowers = Math.round(tufts * 0.55);
+  const plantField = () => {
+    field.innerHTML = '';
+    const count = Math.round(Math.min(260, Math.max(70, (window.innerWidth * window.innerHeight) / 6500)));
     const frag = document.createDocumentFragment();
-    const plant = (cls, depth, target = frag, x = Math.random() * 100) => {
-      // depth 0 = near the horizon (small, slow), 1 = foreground (big)
+    for (let i = 0; i < count; i++) {
       const el = document.createElement('span');
-      el.className = cls;
-      const size = 0.45 + depth * 0.75;
-      el.style.setProperty('--x', `${x}%`);
-      el.style.setProperty('--y', `${(1 - depth) * 92}%`);
-      el.style.setProperty('--d', `${2.4 + Math.random() * 2}s`);
-      el.style.setProperty('--dl', `${-Math.random() * 4}s`);
-      el.style.setProperty('--a', `${4 + Math.random() * 5}deg`);
-      el.style.zIndex = String(Math.round(depth * 100));
-      if (cls === 'tuft') {
-        el.style.setProperty('--w', `${Math.round(14 * size)}px`);
-        el.style.setProperty('--h', `${Math.round((18 + Math.random() * 14) * size)}px`);
-      } else {
-        const [kind, c, c2] = FLOWERS[Math.floor(Math.random() * FLOWERS.length)];
-        if (kind !== 'wild') el.classList.add(kind);
-        el.style.setProperty('--c', c);
-        el.style.setProperty('--c2', c2);
-        // Wildflowers near the horizon grow tall, like the background of a meadow
-        const tall = depth < 0.35 ? 1.7 : 1;
-        el.style.setProperty('--h', `${Math.round((26 + Math.random() * 20) * size * tall)}px`);
-        el.style.setProperty('--s', `${Math.round(13 * size + 3)}px`);
-      }
-      target.appendChild(el);
-    };
-    for (let i = 0; i < tufts; i++) plant('tuft', Math.random());
-    for (let i = 0; i < flowers; i++) plant('flower', Math.random());
-    meadow.appendChild(frag);
-
-    // A denser, taller row in front, so the breeze is easy to see
-    const front = document.createDocumentFragment();
-    const across = Math.round(window.innerWidth / 26);
-    for (let i = 0; i < across; i++) {
-      const x = (i / across) * 100 + Math.random() * 2;
-      plant('tuft', 1.2 + Math.random() * 0.5, front, x);
-      if (i % 3 === 0) plant('flower', 1.1 + Math.random() * 0.5, front, x + 1);
+      const buttercup = Math.random() < 0.12;
+      el.className = buttercup ? 'fdaisy cup' : 'fdaisy';
+      el.style.setProperty('--x', `${Math.random() * 100}%`);
+      el.style.setProperty('--y', `${Math.random() * 100}%`);
+      el.style.setProperty('--s', `${Math.round(14 + Math.random() * 18)}px`);
+      el.style.setProperty('--r', `${Math.round(Math.random() * 360)}deg`);
+      el.style.setProperty('--d', `${3 + Math.random() * 3}s`);
+      el.style.setProperty('--dl', `${-Math.random() * 6}s`);
+      if (!buttercup) el.innerHTML = '<svg viewBox="-10 -10 20 20"><use href="#daisyHead" x="-10" y="-10" width="20" height="20"/></svg>';
+      frag.appendChild(el);
     }
-    foreground.appendChild(front);
+    field.appendChild(frag);
   };
-  plantMeadow();
-  let meadowTimer = null;
+  plantField();
+  let fieldTimer = null;
   window.addEventListener('resize', () => {
-    clearTimeout(meadowTimer);
-    meadowTimer = setTimeout(plantMeadow, 200);
+    clearTimeout(fieldTimer);
+    fieldTimer = setTimeout(plantField, 200);
   });
 
   /* ---------- Picnic basket: opens to a spread of treats + the chocolate box ---------- */
@@ -353,7 +317,7 @@
   /* ---------- Petals drifting down in the background ---------- */
   if (!reduceMotion) {
     const petals = document.getElementById('petals');
-    const PETAL_COLOURS = ['#f2bcc6', '#e9a1b1', '#fbf6ee', '#f4d9a8', '#e7b3a0'];
+    const PETAL_COLOURS = ['#fbf8f0', '#f4efe2', '#fbf8f0', '#f2c94c', '#efe7d6'];
     for (let i = 0; i < 16; i++) {
       const petal = document.createElement('span');
       petal.className = 'petal';
