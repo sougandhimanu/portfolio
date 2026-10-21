@@ -39,7 +39,7 @@
   const nextBtn = document.getElementById('nextPage');
   const navLabel = document.getElementById('navLabel');
   const tabs = Array.from(document.querySelectorAll('#tabs [data-page]'));
-  const singleMQ = window.matchMedia('(max-width: 759px)');
+  const singleMQ = window.matchMedia('(max-width: 899px)');
 
   // Each section's first page gets a ribbon in its bookmark's colour.
   tabs.forEach((t) => {

@@ -78,12 +78,12 @@
         <button type="button" data-page="0" style="--c:#c4737f">Profile</button>
         <button type="button" data-page="1" style="--c:#c9825a">About</button>
         <button type="button" data-page="2" style="--c:#bf9a48">Experience</button>
-        <button type="button" data-page="4" style="--c:#869a5f">Education</button>
-        <button type="button" data-page="5" style="--c:#6f9488">Skills</button>
-        <button type="button" data-page="6" style="--c:#7b93ad">Projects</button>
-        <button type="button" data-page="8" style="--c:#9583ad">Publications</button>
-        <button type="button" data-page="9" style="--c:#b07493">Certifications</button>
-        <button type="button" data-page="10" style="--c:#8c6b55">Contact</button>
+        <button type="button" data-page="5" style="--c:#869a5f">Education</button>
+        <button type="button" data-page="6" style="--c:#6f9488">Skills</button>
+        <button type="button" data-page="8" style="--c:#7b93ad">Projects</button>
+        <button type="button" data-page="10" style="--c:#9583ad">Publications</button>
+        <button type="button" data-page="11" style="--c:#b07493">Certifications</button>
+        <button type="button" data-page="12" style="--c:#8c6b55">Contact</button>
       </div>
       <div class="book" id="book">
 
@@ -186,10 +186,10 @@
         <p class="kicker">Chapter 1</p>
         <h2>About me</h2>
         <p class="lede">Software engineer for systems that are <em>not allowed</em> to go down.</p>
-        <p>Software Development Engineer at Amazon experienced in building scalable full-stack applications,
+        <p>Software Development Engineer with Amazon experience in building scalable full-stack applications,
           distributed systems, and cloud-native services using Java, Spring Boot, React, TypeScript, and AWS.</p>
-        <p>Skilled in event-driven architectures, REST APIs, automated testing, and operational monitoring &mdash;
-          with a strong foundation in software engineering, distributed systems, data structures, and algorithms.</p>
+        <p>Works across event-driven architectures, REST APIs, automated testing, and operational monitoring,
+          grounded in data structures and algorithms.</p>
         <p class="margin-note">Turn the page to read on &mdash; and the picnic basket holds everything I do off the clock.</p>
       </article>
 
@@ -199,10 +199,9 @@
         <h2>Experience</h2>
         <p class="role-line"><strong>Software Development Engineer</strong> &middot; Amazon, Detroit, MI<br><span>Sep 2025 &ndash; Oct 2026</span></p>
         <ul class="bullets">
-          <li><span class="tag">Feature</span>Shipped a self-service BIL migration workflow using Spring Boot REST APIs and React with merchant access validation, replacing an ops-mediated process; achieved 100% unit coverage with Vitest.</li>
-          <li><span class="tag">Frontend</span>Built the Expansion Preferences page end-to-end in React with Zustand, enabling self-service configuration of multiple offer expansion preferences and reducing turnaround time by 25%.</li>
-          <li><span class="tag">Architecture</span>Re-architected offer expansion from synchronous request-blocking to an event-driven SQS FIFO pipeline, adding ordered consumers, filter-chain routing, DLQ recovery, and tiered CloudWatch alarms.</li>
-          <li><span class="tag">Platform</span>Built policy-driven traffic shaping on AWS AppConfig, giving on-call a config-push lever to change rate limits across regions in minutes &mdash; work that previously required a full service deployment.</li>
+          <li><span class="tag">Architecture</span>Re-architected offer expansion from synchronous request-blocking to an event-driven SQS FIFO pipeline processing 1,000+ messages/day: built the ordered consumer and filter-chain routing, with DLQ recovery and tiered CloudWatch alarms provisioned via AWS CDK.</li>
+          <li><span class="tag">Platform</span>Built policy-driven rate limiting and traffic shaping on AWS AppConfig, defined in code and CDK, giving on-call a config-push lever to change rate limits across regions in minutes &mdash; work that previously required a full service deployment.</li>
+          <li><span class="tag">Feature</span>Shipped a self-service BIL migration workflow using Spring Boot REST APIs and React with merchant access validation, including migration-intent APIs and a localized in-app banner, replacing an ops-mediated process; achieved 100% unit coverage with Vitest.</li>
         </ul>
       </article>
 
@@ -211,14 +210,24 @@
         <p class="kicker">Chapter 2, continued</p>
         <h2>&hellip;and more</h2>
         <ul class="bullets">
+          <li><span class="tag">Migration</span>Wrote a connection-removal script with a dry-run mode that safely retired 2M unproductive merchant connections, preceded by a 30-day communication campaign reaching 5M sellers.</li>
+          <li><span class="tag">Frontend</span>Built the Expansion Preferences page end-to-end in React with Zustand and launched it behind an A/B experiment, enabling self-service configuration of multiple offer expansion preferences and reducing turnaround time by 25%.</li>
           <li><span class="tag">Frontend</span>Built a React cooldown mechanism with localStorage persistence and polling hooks, preserving workflow state across refreshes and session breaks and reducing duplicate submissions by 40%.</li>
-          <li><span class="tag">On-call</span>Carried on-call for the service, resolving incidents, driving RCAs, and adding diagnostic logging and alarms that reduced time-to-diagnose by 30% for recurring failures.</li>
-          <li><span class="tag">Performance</span>Cut Java microservice cold-start time through improvements across three layers &mdash; JVM tuning, startup automation, and deployment pipelines &mdash; improving service readiness and reducing initialization overhead.</li>
-          <li><span class="tag">Tooling</span>Used Claude and Kiro across four development workflows &mdash; implementation, test generation, debugging, and iteration &mdash; to compress feature turnaround while maintaining production-quality code.</li>
         </ul>
       </article>
 
-      <!-- Page 4 · Education -->
+      <!-- Page 4 · Experience III -->
+      <article class="page" data-label="Experience (cont.)">
+        <p class="kicker">Chapter 2, continued</p>
+        <h2>&hellip;and more</h2>
+        <ul class="bullets">
+          <li><span class="tag">On-call</span>Carried on-call for the service, resolving incidents, driving RCAs, and adding diagnostic logging and alarms that reduced time-to-diagnose by 30% for recurring failures.</li>
+          <li><span class="tag">Performance</span>Cut Java microservice cold-start time by 33% (90s to 60s) through improvements across 3 layers: JVM tuning, startup automation, and deployment pipelines.</li>
+          <li><span class="tag">Tooling</span>Used Claude and Kiro across 4 development workflows (implementation, test generation, debugging, and iteration), halving feature turnaround from 2 weeks to 1 while maintaining production-quality code.</li>
+        </ul>
+      </article>
+
+      <!-- Education -->
       <article class="page" data-label="Education">
         <p class="kicker">Chapter 3</p>
         <h2>Education</h2>
@@ -241,6 +250,14 @@
           <div><dt>Full Stack</dt><dd>React · Redux · Spring Boot · REST APIs · Microservices · Distributed Systems</dd></div>
           <div><dt>Cloud &amp; AWS</dt><dd>AWS CDK · SQS · DynamoDB · CloudWatch · IAM · AppConfig</dd></div>
           <div><dt>AI &amp; LLMs</dt><dd>Claude API · OpenAI API · Tool Calling · AI Agents · Prompt Engineering · TensorFlow.js</dd></div>
+        </dl>
+      </article>
+
+      <!-- Skills II -->
+      <article class="page" data-label="Skills (cont.)">
+        <p class="kicker">Chapter 4, continued</p>
+        <h2>&hellip;and more</h2>
+        <dl class="skills">
           <div><dt>DevOps &amp; Tools</dt><dd>Docker · Kubernetes · CI/CD · Git · GitHub · GitLab · Jira · Claude · Kiro</dd></div>
           <div><dt>Testing</dt><dd>JUnit · Mockito · Vitest · Integration Testing · Functional Testing</dd></div>
           <div><dt>Core CS</dt><dd>Data Structures · Algorithms · Object-Oriented Programming</dd></div>

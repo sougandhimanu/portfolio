@@ -26,7 +26,7 @@
   --ph: calc(var(--pw) * 1.38);
   --fs: clamp(11.5px, calc(var(--pw) * 0.034), 15px);
 }
-@media (max-width: 759px) {
+@media (max-width: 899px) {
   :root {
     --bw: min(320px, calc(100vw - 36px));
     --pw: min(440px, calc(100vw - 36px));
@@ -79,7 +79,7 @@ body::before {
   gap: 48px 56px;
   padding: 80px 24px 64px;
 }
-@media (min-width: 760px) {
+@media (min-width: 900px) {
   .desk {
     flex-wrap: nowrap;
     align-items: center;
@@ -87,7 +87,7 @@ body::before {
     padding: 74px 24px 18px;
   }
 }
-@media (max-width: 759px) { .desk { padding: 64px 18px 56px; gap: 40px; } }
+@media (max-width: 899px) { .desk { padding: 64px 18px 56px; gap: 40px; } }
 
 /* Pinned index card: what I'm working on now */
 .now-note {
@@ -135,7 +135,7 @@ body::before {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.45);
 }
 @media (max-width: 1180px) { .now-note { width: 180px; padding: 12px 12px 10px; } .now-title { font-size: 1rem; } .now-note li { font-size: 0.95rem; } }
-@media (max-width: 759px) {
+@media (max-width: 899px) {
   .now-note { position: relative; top: auto; right: auto; width: min(300px, 86vw); margin: 18px auto 0; transform: rotate(-1.5deg); }
 }
 
@@ -370,7 +370,8 @@ body::before {
 .role-line { font-size: 0.95em; margin-bottom: 0.8em; }
 .role-line span { color: var(--ink-faint); }
 .bullets li { font-size: 0.93em; }
-.bullets li + li { margin-top: 0.75em; }
+.bullets li + li { margin-top: 0.6em; }
+.page { line-height: 1.5; }
 .tag {
   display: inline-block;
   margin-right: 0.45em;
@@ -414,9 +415,9 @@ body::before {
 .skills dd { font-size: 0.92em; }
 
 /* Projects & publications */
-.project + .project { margin-top: 0.95em; padding-top: 0.8em; border-top: 1px dashed rgba(90, 70, 50, 0.25); }
+.project + .project { margin-top: 0.65em; padding-top: 0.6em; border-top: 1px dashed rgba(90, 70, 50, 0.25); }
 .project .stack { font-size: 0.8em; font-style: italic; color: var(--ink-faint); margin: 0.1em 0 0.3em; }
-.project p:not(.stack) { font-size: 0.92em; }
+.project p:not(.stack) { font-size: 0.9em; }
 .project a { display: inline-block; margin-top: 0.3em; font-size: 0.9em; }
 
 /* Certifications */
@@ -532,7 +533,7 @@ body::before {
 }
 .page.has-mark .kicker { color: var(--mark); }
 
-@media (max-width: 759px) {
+@media (max-width: 899px) {
   /* Keep the scrollable ribbon strip from widening the page */
   .book-wrap { width: var(--pw); max-width: 100%; }
   .bookmarks {
@@ -918,7 +919,7 @@ body::before {
   transform-origin: 50% 100%;
   filter: drop-shadow(0 4px 4px rgba(20, 30, 10, 0.4));
 }
-@media (max-width: 759px) { .cloth, .bouquet { display: none; } }
+@media (max-width: 899px) { .cloth, .bouquet { display: none; } }
 
 /* ============================================
    The picnic props, laid out beside the book
