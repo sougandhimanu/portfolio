@@ -615,7 +615,6 @@ main { position: relative; z-index: 2; padding-top: 56px; }
   border-bottom: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
 }
 .dossier-link:hover { border-bottom-color: var(--accent); }
-
 /* ============================================
    06 Field Notes
    ============================================ */
